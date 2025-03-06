@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="EmpowerGlobal Bridge Initiative (EBI) is dedicated to eradicating poverty and empowering communities through education, healthcare, and sustainable development.">
+    <meta name="author" content="EmpowerGlobal Bridge Initiative">
+    <meta name="keywords" content="EmpowerGlobal, EBI, NGO, poverty eradication, community empowerment, education, healthcare, sustainable development">
+    <title>EmpowerGlobal Bridge Initiative (EBI)</title>
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://empowersglobal.org">
+    <meta property="og:title" content="EmpowerGlobal Bridge Initiative (EBI)">
+    <meta property="og:description" content="Empowering People, Transforming Lives. Join EBI in making a lasting difference.">
+    <meta property="og:image" content="#"> <!--Add the actual image URL-->
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://empowersglobal.org">
+    <meta name="twitter:title" content="EmpowerGlobal Bridge Initiative (EBI)">
+    <meta name="twitter:description" content="Empowering People, Transforming Lives. Join EBI in making a lasting difference.">
+    <meta name="twitter:image" content="#"> <!--Add the actual image URL-->
+
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="shortcut icon" href="Assets/logo_transparent.png" type="image/x-png">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#003399',
+                        secondary: '#006633',
+                        accent: '#ff0000',
+                        orange: '#ff6600',
+                        dark: '#1a1a1a',
+                    },
+                    fontFamily: {
+                        montserrat: ['Montserrat', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        html {
+            font-family: 'Montserrat', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .animate-fade-up {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .animate-fade-right {
+            opacity: 0;
+            transform: translateX(-30px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .animate-fade-left {
+            opacity: 0;
+            transform: translateX(30px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .animate-visible {
+            opacity: 1;
+            transform: translate(0);
+        }
+    </style>
+</head>
+<body class="font-montserrat">
+    <!-- Navbar -->
+    <nav class="fixed w-full bg-white/95 backdrop-blur-sm shadow-md z-50">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center h-16">
+                <a href="#" class="text-2xl font-bold text-primary flex items-center gap-2">
+                   <img src="Assets/logo_transparent.png" alt="" srcset="" class="h-16" viewBox="0 0 24 24" fill="none"> E.G.B.I
+                </a>
+                
+                <!-- Mobile menu button -->
+                <button id="menuButton" class="md:hidden text-gray-600 hover:text-gray-900 focus:outline-none">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+
+                <!-- Desktop menu -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="#story" class="text-black hover:text-primary transition-colors">Our Story</a>
+                    <a href="#services" class="text-black hover:text-primary transition-colors">Services</a>
+                    <a href="#contact" class="text-black hover:text-primary transition-colors">Contact</a>
+                </div>
+            </div>
+
+            <!-- Mobile menu -->
+            <div id="mobileMenu" class="hidden md:hidden pb-4">
+                <a href="#story" class="block py-2 text-gray-600 hover:text-primary transition-colors">Our Story</a>
+                <a href="#services" class="block py-2 text-gray-600 hover:text-primary transition-colors">Services</a>
+                <a href="#contact" class="block py-2 text-gray-600 hover:text-primary transition-colors">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="min-h-screen relative bg-gradient-to-br from-primary to-secondary overflow-hidden">
+        <div class="absolute inset-0 bg-black/30"></div>
+        <div class="relative container mx-auto px-4 py-24 flex flex-col justify-center min-h-screen">
+            <h1 class="text-5xl md:text-7xl font-bold text-white mb-6 animate-fade-up">
+                Impacting Lives,<br>
+                <span class="text-orange">Inspiring Change</span>
+            </h1>
+            <p class="text-xl text-white/90 max-w-2xl mb-8 animate-fade-up" style="transition-delay: 0.2s">
+                We're dedicated to transforming lives through meaningful support, guidance, and opportunities. Join us in making a difference.
+            </p>
+            <div class="flex gap-4 animate-fade-up" style="transition-delay: 0.4s">
+                <button class="bg-orange hover:bg-orange/90 text-white px-8 py-3 rounded-full font-semibold flex items-center gap-2 transform hover:scale-105 transition-all">
+                    Get Started 
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                </button>
+                <button class="border-2 border-white text-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-primary transition-all hover:scale-105">
+                    Learn More
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Our Story Section -->
+    <div id="story" class="py-24 bg-white">
+        <div class="container mx-auto px-6 md:px-12 lg:px-20">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <!-- Left Side: Image -->
+                <div class="relative">
+                    <img 
+                        src="https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?auto=format&fit=crop&q=80&w=800" 
+                        alt="Our Story Image" 
+                        class="rounded-lg shadow-lg hover:shadow-2xl transition-shadow transform hover:scale-105 duration-300"
+                    >
+                    <div class="absolute top-4 left-4 bg-orange text-white px-4 py-2 rounded-full text-sm font-semibold shadow-lg">
+                        Since 2024
+                    </div>
+                </div>
+
+                <!-- Right Side: Text Content -->
+                <div>
+                    <h2 class="text-4xl font-bold text-dark mb-6 leading-tight animate-fade-up">
+                        Our Story: <span class="text-primary">Empowering Lives</span>
+                    </h2>
+                    <p class="text-lg text-gray-700 mb-6 leading-relaxed animate-fade-up" style="transition-delay: 0.2s">
+                        <strong class="text-secondary">Empowers Global Bridge Initiative (EBI)</strong> was founded in 2024 to uplift vulnerable communities struggling with poverty, illiteracy, disabilities, disease, and social injustice.
+                    </p>
+                    <p class="text-lg text-gray-700 mb-6 leading-relaxed animate-fade-up" style="transition-delay: 0.4s">
+                        We believe in <b> holistic, community-driven solutions </b>, ensuring <b> real impact </b> by engaging <b> local stakeholders </b> and creating <b>sustainable change</b>.
+                    </p>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Services Section -->
+    <div id="services" class="py-24 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl md:text-5xl font-bold text-center mb-16 relative animate-fade-up">
+                <span class="text-primary">Our</span>  
+                <span class="text-secondary relative inline-block">
+                    Services
+                    <span class="absolute left-0 bottom-0 w-full h-1 bg-orange rounded-full"></span>
+                </span> 
+                <span class="text-dark">Offered</span>
+            </h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Non-Medical Care -->
+                <div class="bg-[#003399] p-6 rounded-lg shadow-lg animate-fade-up">
+                    <h3 class="text-xl font-semibold text-white mb-4">Non-Medical Care</h3>
+                    <ul class="space-y-2 text-black">
+                        <li class="flex items-center gap-2 bg-white/90 p-2 rounded">
+                            <span class="text-[#003399]">★</span>
+                            Personal care
+                        </li>
+                        <li class="flex items-center gap-2 bg-white/90 p-2 rounded">
+                            <span class="text-[#003399]">★</span>
+                            Companionship support
+                        </li>
+                        <li class="flex items-center gap-2 bg-white/90 p-2 rounded">
+                            <span class="text-[#003399]">★</span>
+                            Housekeeping
+                        </li>
+                        <li class="flex items-center gap-2 bg-white/90 p-2 rounded">
+                            <span class="text-[#003399]">★</span>
+                            Meal preparation
+                        </li>
+                        <li class="flex items-center gap-2 bg-white/90 p-2 rounded">
+                            <span class="text-[#003399]">★</span>
+                            Caregiver services
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Medical Care -->
+                <div class="bg-[#006633] p-6 rounded-lg shadow-lg animate-fade-up" style="transition-delay: 0.2s">
+                    <h3 class="text-xl font-semibold text-white mb-4">Medical Care</h3>
+                    <ul class="space-y-2 text-black">
+                        <li class="flex items-center gap-2 bg-white/90 p-2 rounded">
+                            <span class="text-[#006633]">◆</span>
+                            Skilled Nursing
+                        </li>
+                        <li class="flex items-center gap-2 bg-white/90 p-2 rounded">
+                            <span class="text-[#006633]">◆</span>
+                            Physical therapy
+                        </li>
+                        <li class="flex items-center gap-2 bg-white/90 p-2 rounded">
+                            <span class="text-[#006633]">◆</span>
+                            Medication management
+                        </li>
+                        <li class="flex items-center gap-2 bg-white/90 p-2 rounded">
+                            <span class="text-[#006633]">◆</span>
+                            Hospital support
+                        </li>
+                        <li class="flex items-center gap-2 bg-white/90 p-2 rounded">
+                            <span class="text-[#006633]">◆</span>
+                            Lab services
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Specialized Services -->
+                <div class="bg-[#ff0000] p-6 rounded-lg shadow-lg animate-fade-up" style="transition-delay: 0.4s">
+                    <h3 class="text-xl font-semibold text-white mb-4">Specialized Services</h3>
+                    <ul class="space-y-2 text-black">
+                        <li class="flex items-center gap-2 bg-white/90 p-2 rounded">
+                            <span class="text-[#ff0000]">❖</span>
+                            Cancer Care
+                        </li>
+                        <li class="flex items-center gap-2 bg-white/90 p-2 rounded">
+                            <span class="text-[#ff0000]">❖</span>
+                            Diabetes Care
+                        </li>
+                        <li class="flex items-center gap-2 bg-white/90 p-2 rounded">
+                            <span class="text-[#ff0000]">❖</span>
+                            Stroke rehabilitation
+                        </li>
+                        <li class="flex items-center gap-2 bg-white/90 p-2 rounded">
+                            <span class="text-[#ff0000]">❖</span>
+                            Neuromuscular care
+                        </li>
+                        <li class="flex items-center gap-2 bg-white/90 p-2 rounded">
+                            <span class="text-[#ff0000]">❖</span>
+                            End-of-life care
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Community Care -->
+                <div class="bg-[#ff6600] p-6 rounded-lg shadow-lg animate-fade-up" style="transition-delay: 0.6s">
+                    <h3 class="text-xl font-semibold text-white mb-4">Community Care</h3>
+                    <ul class="space-y-2 text-black">
+                        <li class="flex items-center gap-2 bg-white/90 p-2 rounded">
+                            <span class="text-[#ff6600]">➤</span>
+                            Caregiver Training
+                        </li>
+                        <li class="flex items-center gap-2 bg-white/90 p-2 rounded">
+                            <span class="text-[#ff6600]">➤</span>
+                            Health Education
+                        </li>
+                        <li class="flex items-center gap-2 bg-white/90 p-2 rounded">
+                            <span class="text-[#ff6600]">➤</span>
+                            Mental Health
+                        </li>
+                        <li class="flex items-center gap-2 bg-white/90 p-2 rounded">
+                            <span class="text-[#ff6600]">➤</span>
+                            Preventive Care
+                        </li>
+                        <li class="flex items-center gap-2 bg-white/90 p-2 rounded">
+                            <span class="text-[#ff6600]">➤</span>
+                            Elderly Care
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+   <!-- Features Section -->
+    <section class="py-24 bg-gray-100">
+        <div class="container mx-auto px-6 md:px-12 lg:px-16">
+            <h2 class="text-4xl md:text-5xl font-bold text-center text-dark mb-16 animate-fade-up">
+                <span class="text-primary">How</span>  
+                <span class="relative inline-block text-secondary">
+                    We Help
+                    <span class="absolute left-0 bottom-0 w-full h-1 bg-orange rounded-full"></span>
+                </span> 
+            </h2>
+            
+            <div class="grid gap-10 md:grid-cols-2 lg:grid-cols-3">
+                <!-- Card 1 -->
+                <div class="bg-white p-8 rounded-lg shadow-md text-center transition-transform transform hover:scale-105 animate-fade-up" style="transition-delay: 0.2s">
+                    <div class="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary">
+                            <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-4 text-dark">Compassionate Support</h3>
+                    <p class="text-gray-600 leading-relaxed">Providing caring assistance to those in need through our dedicated programs.</p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bg-white p-8 rounded-lg shadow-md text-center transition-transform transform hover:scale-105 animate-fade-up" style="transition-delay: 0.4s">
+                    <div class="w-20 h-20 bg-secondary/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-secondary">
+                            <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-4 text-dark">Community Building</h3>
+                    <p class="text-gray-600 leading-relaxed">Creating strong networks of support and fostering meaningful connections.</p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-white p-8 rounded-lg shadow-md text-center transition-transform transform hover:scale-105 animate-fade-up" style="transition-delay: 0.6s">
+                    <div class="w-20 h-20 bg-orange/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-orange">
+                            <circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-4 text-dark">Targeted Solutions</h3>
+                    <p class="text-gray-600 leading-relaxed">Developing customized approaches to address individual needs effectively.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Impact Section -->
+    <div class="py-24 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                <div class="flex-1 animate-fade-right">
+                    <img 
+                        src="https://images.unsplash.com/photo-1544027993-37dbfe43562a?auto=format&fit=crop&q=80"
+                        alt="People helping each other"
+                        class="rounded-lg shadow-xl hover:shadow-2xl transition-shadow"
+                    >
+                </div>
+                <div class="flex-1">
+                    <h2 class="text-4xl font-bold text-dark mb-6 animate-fade-left">Our Impact</h2>
+                    <div class="space-y-6">
+                        <div class="flex items-center gap-4 animate-fade-left" style="transition-delay: 0.2s">
+                            <div class="p-3 bg-primary/10 rounded-full transform hover:scale-110 transition-transform">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary"><path d="m23 6-9.5 9.5-5-5L1 18"/><path d="M17 6h6v6"/></svg>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold">1,000+ Lives Changed</h3>
+                                <p class="text-gray-600">Through our dedicated programs and initiatives</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-4 animate-fade-left" style="transition-delay: 0.4s">
+                            <div class="p-3 bg-secondary/10 rounded-full transform hover:scale-110 transition-transform">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-secondary"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold">50+ Communities Served</h3>
+                                <p class="text-gray-600">Across multiple regions and demographics</p>
+                            </div>
+                        </div>
+                        <button class="bg-primary hover:bg-primary/90 text-white px-8 py-3 rounded-full font-semibold mt-8 animate-fade-left transform hover:scale-105 transition-all" style="transition-delay: 0.6s">
+                            View Our Success Stories
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Form Section -->
+    <section id="contact" class="py-24 bg-gray-100">
+        <div class="container mx-auto px-6 md:px-12 lg:px-16">
+            <h2 class="text-4xl md:text-5xl font-bold text-center text-dark mb-16 animate-fade-up">
+                <span class="text-primary">Get In</span>  
+                <span class="relative inline-block text-secondary">
+                    Touch
+                    <span class="absolute left-0 bottom-0 w-full h-1 bg-orange rounded-full"></span>
+                </span>  
+            </h2>
+
+            <div class="bg-white p-10 rounded-lg shadow-lg max-w-3xl mx-auto animate-fade-up">
+                <form class="space-y-6">
+                    <!-- Name Fields -->
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <label for="firstName" class="block text-sm font-semibold text-gray-700 mb-2">First Name</label>
+                            <input type="text" id="firstName" name="firstName" class="w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all" required>
+                        </div>
+                        <div>
+                            <label for="lastName" class="block text-sm font-semibold text-gray-700 mb-2">Last Name</label>
+                            <input type="text" id="lastName" name="lastName" class="w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all" required>
+                        </div>
+                    </div>
+
+                    <!-- Email & Phone -->
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <label for="email" class="block text-sm font-semibold text-gray-700 mb-2">Email Address</label>
+                            <input type="email" id="email" name="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all" required>
+                        </div>
+                        <div>
+                            <label for="phone" class="block text-sm font-semibold text-gray-700 mb-2">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" class="w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all" required>
+                        </div>
+                    </div>
+
+                    <!-- Service Selection -->
+                    <div>
+                        <label for="service" class="block text-sm font-semibold text-gray-700 mb-2">Service Interested In</label>
+                        <select id="service" name="service" class="w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all" required>
+                            <option value="">Select a service</option>
+                            <option value="non-medical">Non-Medical Care</option>
+                            <option value="medical">Medical Care</option>
+                            <option value="specialized">Specialized Services</option>
+                            <option value="community">Community Care</option>
+                        </select>
+                    </div>
+
+                    <!-- Message Box -->
+                    <div>
+                        <label for="message" class="block text-sm font-semibold text-gray-700 mb-2">Your Message</label>
+                        <textarea id="message" name="message" rows="5" class="w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all resize-none" required></textarea>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <button type="submit" class="w-full bg-primary hover:bg-primary/90 text-white px-8 py-4 rounded-full font-semibold transform hover:scale-105 transition-all shadow-lg">
+                        Send Message
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- CTA Section -->
+    <div class="bg-dark text-white py-16">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-4xl font-bold mb-6 animate-fade-up">Ready to Make a Difference?</h2>
+            <p class="text-xl text-white/80 mb-8 max-w-2xl mx-auto animate-fade-up" style="transition-delay: 0.2s">
+                Join us in our mission to create positive change and transform lives.
+            </p>
+            <button class="bg-orange hover:bg-orange/90 text-white px-8 py-3 rounded-full font-semibold animate-fade-up transform hover:scale-105 transition-all" style="transition-delay: 0.4s">
+                Get Involved Today
+            </button>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer class="bg-[#1A1A1A] text-white py-12">
+        <div class="container mx-auto px-6 md:px-12 lg:px-16">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 text-center md:text-left">
+                
+                <!-- Company Logo & Info -->
+                <div class="flex flex-col items-center md:items-start">
+                    <img src="Assets/footer_logo_main.png" alt="Empowers Global Logo" class="w-32 mb-4">
+                    <h3 class="text-2xl font-semibold text-[#006633]">Empowers Global Bridge Initiative</h3>
+                    <p class="text-gray-400 mt-2 text-sm">Impacting Lives, Inspiring Change.</p>
+                </div>
+
+                <!-- Contact Information -->
+                <div>
+                    <h3 class="text-xl font-semibold">Contact Us</h3>
+                    <div class="mt-3 space-y-2 text-gray-400">
+                        <p>📞 <a href="tel:+254717720683" class="hover:text-gray-200 transition">0717 720 683</a></p>
+                        <p>📞 <a href="tel:+254748455493" class="hover:text-gray-200 transition">0748 455 493</a></p>
+                        <p>📞 <a href="tel:+254785306002" class="hover:text-gray-200 transition">+254 785 306 002</a></p>
+                        <p>✉️ <a href="mailto:info@empowersglobal.org" class="hover:text-gray-200 transition">info@empowersglobal.org</a></p>
+                        <p>✉️ <a href="mailto:customercare@empowersglobal.org" class="hover:text-gray-200 transition">customercare@empowersglobal.org</a></p>
+                    </div>
+                </div>
+
+                <!-- Social Media Links -->
+                <div>
+                    <h3 class="text-xl font-semibold">Follow Us</h3>
+                    <div class="flex justify-center md:justify-start mt-4 space-x-5">
+                        <a href="#" class="text-gray-400 hover:text-white transition">
+                            <img src="Assets/facebook.svg" alt="" srcset="" class="h-6">
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition">
+                            <img src="Assets/tiktok.svg" alt="" srcset="" class="h-6">
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition">
+                            <img src="Assets/twitter.svg" alt="" srcset="" class="h-6">
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition">
+                            <img src="Assets/linkedin.svg" alt="" srcset="" class="h-6">
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Divider -->
+            <div class="border-t border-gray-600 mt-10"></div>
+
+        </div>
+
+        <!-- Credits Section -->
+        <div class="bg-[#333333] py-4 text-center text-gray-300 font-semibold text-sm mt-6">
+            Developed by 
+            <a href="https://quickofficepointe.co.ke" target="_blank" class="text-[#006633] hover:text-white transition">
+                QuickOfficePointe
+            </a>
+        </div>
+    </footer>
+
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animate-visible');
+                    }
+                });
+            }, {
+                threshold: 0.1,
+                rootMargin: '50px',
+            });
+
+            document.querySelectorAll('.animate-fade-up, .animate-fade-right, .animate-fade-left').forEach((element) => {
+                observer.observe(element);
+            });
+
+            // Mobile Menu Toggle
+            const menuButton = document.getElementById('menuButton');
+            const mobileMenu = document.getElementById('mobileMenu');
+
+            menuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+
+            // Close mobile menu when clicking on a link
+            document.querySelectorAll('#mobileMenu a').forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
