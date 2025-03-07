@@ -74,33 +74,35 @@
 </head>
 <body class="font-montserrat">
     <!-- Navbar -->
-    <nav class="fixed w-full bg-white/95 backdrop-blur-sm shadow-md z-50">
-        <div class="container mx-auto px-4">
+    <nav class="fixed w-full bg-white/95 backdrop-blur-md shadow-md z-50">
+        <div class="container mx-auto px-6 lg:px-12">
             <div class="flex justify-between items-center h-16">
-                <a href="#" class="text-2xl font-bold text-primary flex items-center gap-2">
-                   <img src="Assets/logo_transparent.png" alt="" srcset="" class="h-16" viewBox="0 0 24 24" fill="none"> E.G.B.I
+                <!-- Logo and Name -->
+                <a href="#" class="text-2xl font-bold text-[#003399] flex items-center gap-3">
+                    <img src="Assets/logo_transparent.png" alt="E.G.B.I Logo" class="h-12 w-auto">
+                    <span class="text-[#003399] tracking-wide">E.</span> <span class="text-[#ff0000]">G.</span> <span class="text-[#006633]">B.</span> <span class="text-[#ff6600]">I.</span>
                 </a>
-                
-                <!-- Mobile menu button -->
-                <button id="menuButton" class="md:hidden text-gray-600 hover:text-gray-900 focus:outline-none">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+
+                <!-- Mobile Menu Button -->
+                <button id="menuButton" class="md:hidden text-gray-600 hover:text-[#003399] focus:outline-none">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M4 6h16M4 12h16M4 18h16" />
                     </svg>
                 </button>
 
-                <!-- Desktop menu -->
-                <div class="hidden md:flex space-x-8">
-                    <a href="#story" class="text-black hover:text-primary transition-colors">Our Story</a>
-                    <a href="#services" class="text-black hover:text-primary transition-colors">Services</a>
-                    <a href="#contact" class="text-black hover:text-primary transition-colors">Contact</a>
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-12">
+                    <a href="#story" class="text-[#1A1A1A] font-medium hover:text-[#FF6600] transition-all">Our Story</a>
+                    <a href="#services" class="text-[#1A1A1A] font-medium hover:text-[#FF6600] transition-all">Services</a>
+                    <a href="#contact" class="text-[#1A1A1A] font-medium hover:text-[#FF6600] transition-all">Contact</a>
                 </div>
             </div>
 
-            <!-- Mobile menu -->
-            <div id="mobileMenu" class="hidden md:hidden pb-4">
-                <a href="#story" class="block py-2 text-gray-600 hover:text-primary transition-colors">Our Story</a>
-                <a href="#services" class="block py-2 text-gray-600 hover:text-primary transition-colors">Services</a>
-                <a href="#contact" class="block py-2 text-gray-600 hover:text-primary transition-colors">Contact</a>
+            <!-- Mobile Menu -->
+            <div id="mobileMenu" class="hidden md:hidden flex flex-col space-y-3 bg-white py-4 px-6 shadow-md rounded-lg absolute w-full left-0 top-16">
+                <a href="#story" class="text-gray-700 font-medium hover:text-[#FF6600] transition-all">Our Story</a>
+                <a href="#services" class="text-gray-700 font-medium hover:text-[#FF6600] transition-all">Services</a>
+                <a href="#contact" class="text-gray-700 font-medium hover:text-[#FF6600] transition-all">Contact</a>
             </div>
         </div>
     </nav>
@@ -516,62 +518,6 @@
         </div>
     </section>
 
-    <!-- Work Plan Section -->
-    <section id="work-plan" class="py-24 bg-gray-50">
-        <div class="container mx-auto px-4 md:px-8 lg:px-16">
-            <h2 class="text-4xl md:text-5xl font-bold text-center text-dark mb-12 animate-fade-up">
-                <span class="text-[#003399]">Work Plan</span>  
-                <span class="relative inline-block text-[#FF6600]">
-                    for Launching
-                    <span class="absolute left-0 bottom-0 w-full h-1 bg-[#FF6600] rounded-full"></span>
-                </span>  
-            </h2>
-
-            <!-- Table Container (Ensures Horizontal Scroll on Mobile) -->
-            <div class="overflow-x-auto rounded-lg shadow-lg">
-                <table class="w-full min-w-[700px] md:min-w-full bg-white border border-gray-200 rounded-lg">
-                    <!-- Table Header -->
-                    <thead class="bg-[#003399] text-white text-left">
-                        <tr>
-                            <th class="px-4 md:px-6 py-4">Objective</th>
-                            <th class="px-4 md:px-6 py-4">Activity</th>
-                            <th class="px-4 md:px-6 py-4">Timeline</th>
-                            <th class="px-4 md:px-6 py-4">Outcome</th>
-                        </tr>
-                    </thead>
-
-                    <!-- Table Body -->
-                    <tbody class="text-gray-700">
-                        <!-- Row 1 -->
-                        <tr class="border-b hover:bg-gray-100 transition">
-                            <td class="px-4 md:px-6 py-4 font-semibold">Register and establish the NGO</td>
-                            <td class="px-4 md:px-6 py-4">Conduct feasibility study, develop mission & policies, apply for registration</td>
-                            <td class="px-4 md:px-6 py-4">Feb 2024 - Mar 2024</td>
-                            <td class="px-4 md:px-6 py-4">Legal recognition, governance framework, operational & financial setup</td>
-                        </tr>
-
-                        <!-- Row 2 -->
-                        <tr class="border-b hover:bg-gray-100 transition">
-                            <td class="px-4 md:px-6 py-4 font-semibold">Recruit & train staff/volunteers</td>
-                            <td class="px-4 md:px-6 py-4">Develop HR plan, hire staff, provide training</td>
-                            <td class="px-4 md:px-6 py-4">Mar 2024</td>
-                            <td class="px-4 md:px-6 py-4">Qualified & skilled team ready to implement NGO programs</td>
-                        </tr>
-
-                        <!-- Row 3 -->
-                        <tr class="border-b hover:bg-gray-100 transition">
-                            <td class="px-4 md:px-6 py-4 font-semibold">Design & launch flagship programs</td>
-                            <td class="px-4 md:px-6 py-4">Stakeholder analysis, develop programs, secure funding, implement & monitor</td>
-                            <td class="px-4 md:px-6 py-4">Mar 2024 - May 2024</td>
-                            <td class="px-4 md:px-6 py-4">Strategic program execution, sustainable funding, measurable impact</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-    </section>
-
-
     <!-- Contact Form Section -->
     <section id="contact" class="py-24 bg-gradient-to-br from-[#E3F2FD] to-[#F1F8E9]">
         <div class="container mx-auto px-6 md:px-12 lg:px-16">
@@ -658,7 +604,7 @@
                 
                 <!-- Company Logo & Info -->
                 <div class="flex flex-col items-center md:items-start">
-                    <img src="Assets/footer_logo_main.png" alt="Empowers Global Logo" class="w-32 mb-4">
+                    <img src="Assets/footer_logo_orange.png" alt="Empowers Global Logo" class="w-32 mb-4">
                     <h3 class="text-2xl font-semibold text-[#006633]">Empowers Global Bridge Initiative</h3>
                     <p class="text-gray-400 mt-2 text-sm">Impacting Lives, Inspiring Change.</p>
                 </div>
