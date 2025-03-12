@@ -28,8 +28,6 @@
         <link rel="shortcut icon" href="Assets/logo_transparent.png" type="image/x-png">
 
         <script src="https://cdn.tailwindcss.com"></script>
-        <link rel="stylesheet" href="Assets/css/styles.css">
-
         <script>
             tailwind.config = {
                 theme: {
@@ -83,6 +81,7 @@
                 <a href="#" class="text-2xl font-bold text-[#003399] flex items-center gap-3">
                     <img src="Assets/logo_transparent.png" alt="EBI Logo" class="h-12 w-auto">
                     <span class="text-[#003399] tracking-wide">E</span> 
+                    <!-- <span class="text-[#ff0000]">G.</span>  -->
                     <span class="text-[#006633]">B</span> 
                     <span class="text-[#ff6600]">I</span>
                 </a>
@@ -95,39 +94,23 @@
                 </button>
 
                 <!-- Desktop Menu -->
-                <div class="hidden md:flex space-x-8 items-center">
-                    <a href="#about" class="text-[#1A1A1A] font-medium hover:text-[#FF6600] transition-all">About Us</a>
+                <div class="hidden md:flex space-x-12">
+                    <a href="#" class="text-[#1A1A1A] font-medium hover:text-[#FF6600] transition-all">About Us</a>
                     <a href="#services" class="text-[#1A1A1A] font-medium hover:text-[#FF6600] transition-all">Services</a>
                     <a href="#programs" class="text-gray-700 font-medium hover:text-[#FF6600] transition-all">Programs</a>
-                    <a href="#team" class="text-gray-700 font-medium hover:text-[#FF6600] transition-all">Our Team</a>
-                    <a href="#blog" class="text-gray-700 font-medium hover:text-[#FF6600] transition-all">Blog</a>
-                    <a href="#gallery" class="text-gray-700 font-medium hover:text-[#FF6600] transition-all">Gallery</a>
                     <a href="#contact" class="text-[#1A1A1A] font-medium hover:text-[#FF6600] transition-all">Contact</a>
-
-                    <!-- Donate Button (CTA) -->
-                    <a href="donate.html" class="bg-[#FF6600] text-white font-semibold px-5 py-2 rounded-lg shadow-lg hover:bg-[#CC5500] transition-all">
-                        Donate
-                    </a>
                 </div>
             </div>
 
             <!-- Mobile Menu -->
             <div id="mobileMenu" class="hidden md:hidden flex flex-col space-y-3 bg-white py-4 px-6 shadow-md rounded-lg absolute w-full left-0 top-16">
-                <a href="#about" class="text-gray-700 font-medium hover:text-[#FF6600] transition-all">About Us</a>
+                <a href="#" class="text-gray-700 font-medium hover:text-[#FF6600] transition-all">About Us</a>
                 <a href="#services" class="text-gray-700 font-medium hover:text-[#FF6600] transition-all">Services</a>
                 <a href="#programs" class="text-gray-700 font-medium hover:text-[#FF6600] transition-all">Programs</a>
-                <a href="#team" class="text-gray-700 font-medium hover:text-[#FF6600] transition-all">Team</a>
-                <a href="#blog" class="text-gray-700 font-medium hover:text-[#FF6600] transition-all">Blog</a>
-                <a href="#gallery" class="text-gray-700 font-medium hover:text-[#FF6600] transition-all">Gallery</a>
                 <a href="#contact" class="text-gray-700 font-medium hover:text-[#FF6600] transition-all">Contact</a>
-                <!-- Donate Button for Mobile -->
-                <a href="donate.html" class="bg-[#FF6600] text-white text-center font-semibold px-5 py-2 rounded-lg shadow-lg hover:bg-[#CC5500] transition-all">
-                    Donate
-                </a>
             </div>
         </div>
     </nav>
-
 
     <!-- Hero Section -->
     <div class="min-h-screen relative bg-gradient-to-br from-primary to-secondary overflow-hidden">
@@ -156,89 +139,40 @@
         </div>
     </div>
 
-    <!-- About Us Section -->
-    <section id="about" class="py-24 bg-gray-100">
-        <div class="container mx-auto px-6 md:px-12 lg:px-16">
-            <!-- Section Heading -->
-            <h2 class="text-4xl md:text-5xl font-bold text-center text-[#1A1A1A] mb-12 animate-fade-up">
-                <span class="text-[#003399]">About</span> 
-                <span class="relative inline-block text-[#006633]">
-                    Us
-                    <span class="absolute left-0 bottom-0 w-full h-1 bg-[#FF6600] rounded-full"></span>
-                </span>  
-            </h2>
-
-            <!-- About Us Content -->
-            <div class="grid md:grid-cols-3 gap-8">
-                <!-- Community Health -->
-                <div class="bg-white p-8 rounded-lg shadow-lg animate-fade-up">
-                    <div class="flex items-center gap-4 mb-4">
-                        <span class="w-12 h-12 bg-[#003399] text-white flex items-center justify-center text-2xl font-bold rounded-full">1</span>
-                        <h3 class="text-2xl font-semibold text-[#1A1A1A]">Community Health</h3>
-                    </div>
-                    <p class="text-gray-700">
-                        We work to enhance community health by providing education, preventive care, and essential services to underserved populations. Our goal is to bridge healthcare gaps, ensuring that everyone, regardless of their background, has access to quality health resources.
-                    </p>
-                </div>
-
-                <!-- Home Health -->
-                <div class="bg-white p-8 rounded-lg shadow-lg animate-fade-up delay-200">
-                    <div class="flex items-center gap-4 mb-4">
-                        <span class="w-12 h-12 bg-[#006633] text-white flex items-center justify-center text-2xl font-bold rounded-full">2</span>
-                        <h3 class="text-2xl font-semibold text-[#1A1A1A]">Home Health</h3>
-                    </div>
-                    <p class="text-gray-700">
-                        Our home health services provide personalized care and support to individuals who need assistance with daily living activities. We focus on helping elderly individuals and patients recovering at home maintain independence while receiving quality medical and non-medical care.
-                    </p>
-                </div>
-
-                <!-- People Living with Disabilities -->
-                <div class="bg-white p-8 rounded-lg shadow-lg animate-fade-up delay-400">
-                    <div class="flex items-center gap-4 mb-4">
-                        <span class="w-12 h-12 bg-[#FF6600] text-white flex items-center justify-center text-2xl font-bold rounded-full">3</span>
-                        <h3 class="text-2xl font-semibold text-[#1A1A1A]">People Living with Disabilities</h3>
-                    </div>
-                    <p class="text-gray-700">
-                        We are committed to empowering individuals with disabilities by providing inclusive healthcare, support services, and advocacy. Our programs aim to enhance mobility, accessibility, and social integration, ensuring that everyone can lead a dignified and independent life.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Founder’s Story Section -->
-    <section id="founder" class="py-24 bg-gray-100">
+    <!-- Our Story Section -->
+    <div id="story" class="py-24 bg-white">
         <div class="container mx-auto px-6 md:px-12 lg:px-20">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-                
-                <!-- Left Side: Founder Image -->
+                <!-- Left Side: Image -->
                 <div class="relative">
                     <img 
-                        src="Assets/founder.png" 
-                        alt="Founder of Empowers Global Bridge Initiative" 
+                        src="https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?auto=format&fit=crop&q=80&w=800" 
+                        alt="Our Story Image" 
                         class="rounded-lg shadow-lg hover:shadow-2xl transition-shadow transform hover:scale-105 duration-300"
                     >
                     <div class="absolute top-4 left-4 bg-orange text-white px-4 py-2 rounded-full text-sm font-semibold shadow-lg">
-                        A Vision for Change
+                        Since 2024
                     </div>
                 </div>
 
                 <!-- Right Side: Text Content -->
                 <div>
                     <h2 class="text-4xl font-bold text-dark mb-6 leading-tight animate-fade-up">
-                        Our Founder’s <span class="text-primary">Journey</span>
+                        Our Story: <span class="text-primary">Empowering Lives</span>
                     </h2>
                     <p class="text-lg text-gray-700 mb-6 leading-relaxed animate-fade-up" style="transition-delay: 0.2s">
-                        <strong class="text-secondary">Empowers Global Bridge Initiative (EGBI)</strong> was founded with a deep commitment to social transformation. Driven by compassion and a desire to create lasting change, our founder saw the urgent need for a bridge between resources and underserved communities.
+                        <strong class="text-secondary">Empowers Global Bridge Initiative (EBI)</strong> was founded in 2024 to uplift vulnerable communities struggling with poverty, illiteracy, disabilities, disease, and social injustice.
                     </p>
                     <p class="text-lg text-gray-700 mb-6 leading-relaxed animate-fade-up" style="transition-delay: 0.4s">
-                        Through <b> community-driven programs </b> and <b> strategic partnerships </b>, we have empowered individuals by providing access to healthcare, education, and support systems, ensuring <b> a better tomorrow for all.</b>
+                        We believe in <b> holistic, community-driven solutions </b>, ensuring <b> real impact </b> by engaging <b> local stakeholders </b> and creating <b>sustainable change</b>.
                     </p>
+                    
                 </div>
-
             </div>
         </div>
-    </section>
+    </div>
+
+    
 
     <!-- Vision & Mission Section -->
     <section id="vision_mission" class="py-24 bg-[#0a0a0a] relative">
@@ -283,193 +217,127 @@
         </div>
     </section>
 
-    <!-- Services Section (FAQ Style) -->
-<div id="services" class="py-24 bg-gray-50">
-    <div class="container mx-auto px-4">
-        <h2 class="text-4xl md:text-5xl font-bold text-center mb-12">
-            <span class="text-[#003399]">Our</span>  
-            <span class="relative inline-block text-[#FF6600]">
-                Services
-                <span class="absolute left-0 bottom-0 w-full h-1 bg-[#FF6600] rounded-full"></span>
-            </span> 
-        </h2>
-
-        <!-- FAQ Container -->
-        <div class="max-w-4xl mx-auto space-y-6">
-            
-            <!-- Service Item: Non-Medical Care -->
-            <div class="bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105 border border-[#003399]">
-                <button class="w-full text-left py-5 px-6 flex items-center justify-between" onclick="toggleFAQ(1)">
-                    <div class="flex items-center gap-4">
-                        <span class="bg-[#003399] text-white p-2 rounded-full">
-                            🏡
-                        </span>
-                        <h3 class="text-lg font-semibold text-[#003399]">Community Health</h3>
-                    </div>
-                    <span id="icon-1">▼</span>
-                </button>
-                <div id="faq-1" class="hidden p-4 bg-gray-100">
-                    <p class="text-gray-700 mb-3">We provide daily living assistance to improve comfort and well-being.</p>
+    <!-- Services Section -->
+    <div id="services" class="py-24 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl md:text-5xl font-bold text-center mb-16 relative animate-fade-up">
+                <span class="text-primary">Our</span>  
+                <span class="text-secondary relative inline-block">
+                    Services
+                    <span class="absolute left-0 bottom-0 w-full h-1 bg-orange rounded-full"></span>
+                </span> 
+            </h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Non-Medical Care -->
+                <div class="bg-[#003399] p-6 rounded-lg shadow-lg animate-fade-up">
+                    <h3 class="text-xl font-semibold text-white mb-4">Non-Medical Care</h3>
                     <ul class="space-y-2 text-black">
-                        <li>★ Personal Care - Assistance with grooming and hygiene.</li>
-                        <li>★ Companionship - Emotional and social support.</li>
-                        <li>★ Housekeeping - Light cleaning and laundry services.</li>
-                        <li>★ Meal Preparation - Healthy meal assistance.</li>
-                        <li>★ Caregiver Services - Professional home assistance.</li>
+                        <li class="flex items-center gap-2 bg-white/90 p-2 rounded">
+                            <span class="text-[#003399]">★</span>
+                            Personal care
+                        </li>
+                        <li class="flex items-center gap-2 bg-white/90 p-2 rounded">
+                            <span class="text-[#003399]">★</span>
+                            Companionship support
+                        </li>
+                        <li class="flex items-center gap-2 bg-white/90 p-2 rounded">
+                            <span class="text-[#003399]">★</span>
+                            Housekeeping
+                        </li>
+                        <li class="flex items-center gap-2 bg-white/90 p-2 rounded">
+                            <span class="text-[#003399]">★</span>
+                            Meal preparation
+                        </li>
+                        <li class="flex items-center gap-2 bg-white/90 p-2 rounded">
+                            <span class="text-[#003399]">★</span>
+                            Caregiver services
+                        </li>
                     </ul>
                 </div>
-            </div>
 
-            <!-- Service Item: Medical Care -->
-            <div class="bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105 border border-[#006633]">
-                <button class="w-full text-left py-5 px-6 flex items-center justify-between" onclick="toggleFAQ(2)">
-                    <div class="flex items-center gap-4">
-                        <span class="bg-[#006633] text-white p-2 rounded-full">
-                            🏥
-                        </span>
-                        <h3 class="text-lg font-semibold text-[#006633]">Home Care</h3>
-                    </div>
-                    <span id="icon-2">▼</span>
-                </button>
-                <div id="faq-2" class="hidden p-4 bg-gray-100">
-                    <p class="text-gray-700 mb-3">Our team provides professional healthcare support to ensure well-being.</p>
+                <!-- Medical Care -->
+                <div class="bg-[#006633] p-6 rounded-lg shadow-lg animate-fade-up" style="transition-delay: 0.2s">
+                    <h3 class="text-xl font-semibold text-white mb-4">Medical Care</h3>
                     <ul class="space-y-2 text-black">
-                        <li>◆ Skilled Nursing - Experienced nursing care at home.</li>
-                        <li>◆ Physical Therapy - Rehabilitation programs.</li>
-                        <li>◆ Medication Management - Organized prescription schedules.</li>
-                        <li>◆ Hospital Support - Post-hospitalization assistance.</li>
-                        <li>◆ Lab Services - Home-based medical tests.</li>
+                        <li class="flex items-center gap-2 bg-white/90 p-2 rounded">
+                            <span class="text-[#006633]">◆</span>
+                            Skilled Nursing
+                        </li>
+                        <li class="flex items-center gap-2 bg-white/90 p-2 rounded">
+                            <span class="text-[#006633]">◆</span>
+                            Physical therapy
+                        </li>
+                        <li class="flex items-center gap-2 bg-white/90 p-2 rounded">
+                            <span class="text-[#006633]">◆</span>
+                            Medication management
+                        </li>
+                        <li class="flex items-center gap-2 bg-white/90 p-2 rounded">
+                            <span class="text-[#006633]">◆</span>
+                            Hospital support
+                        </li>
+                        <li class="flex items-center gap-2 bg-white/90 p-2 rounded">
+                            <span class="text-[#006633]">◆</span>
+                            Lab services
+                        </li>
                     </ul>
                 </div>
-            </div>
 
-            <!-- Service Item: Specialized Services -->
-            <!-- <div class="bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105 border border-[#FF0000]">
-                <button class="w-full text-left py-5 px-6 flex items-center justify-between" onclick="toggleFAQ(3)">
-                    <div class="flex items-center gap-4">
-                        <span class="bg-[#FF0000] text-white p-2 rounded-full">
-                            💖
-                        </span>
-                        <h3 class="text-lg font-semibold text-[#FF0000]">Specialized Services</h3>
-                    </div>
-                    <span id="icon-3">▼</span>
-                </button>
-                <div id="faq-3" class="hidden p-4 bg-gray-100">
-                    <p class="text-gray-700 mb-3">Specialized support for chronic illnesses and rehabilitation.</p>
+                <!-- Specialized Services -->
+                <div class="bg-[#ff0000] p-6 rounded-lg shadow-lg animate-fade-up" style="transition-delay: 0.4s">
+                    <h3 class="text-xl font-semibold text-white mb-4">Specialized Services</h3>
                     <ul class="space-y-2 text-black">
-                        <li>❖ Cancer Care - Comprehensive support for cancer patients.</li>
-                        <li>❖ Diabetes Care - Personalized diabetes management.</li>
-                        <li>❖ Stroke Rehab - Assistance in mobility recovery.</li>
-                        <li>❖ Neuromuscular Care - Support for nervous system disorders.</li>
-                        <li>❖ End-of-Life Care - Compassionate palliative services.</li>
+                        <li class="flex items-center gap-2 bg-white/90 p-2 rounded">
+                            <span class="text-[#ff0000]">❖</span>
+                            Cancer Care
+                        </li>
+                        <li class="flex items-center gap-2 bg-white/90 p-2 rounded">
+                            <span class="text-[#ff0000]">❖</span>
+                            Diabetes Care
+                        </li>
+                        <li class="flex items-center gap-2 bg-white/90 p-2 rounded">
+                            <span class="text-[#ff0000]">❖</span>
+                            Stroke rehabilitation
+                        </li>
+                        <li class="flex items-center gap-2 bg-white/90 p-2 rounded">
+                            <span class="text-[#ff0000]">❖</span>
+                            Neuromuscular care
+                        </li>
+                        <li class="flex items-center gap-2 bg-white/90 p-2 rounded">
+                            <span class="text-[#ff0000]">❖</span>
+                            End-of-life care
+                        </li>
                     </ul>
                 </div>
-            </div> -->
 
-            <!-- Service Item: Community Care -->
-            <div class="bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105 border border-[#FF6600]">
-                <button class="w-full text-left py-5 px-6 flex items-center justify-between" onclick="toggleFAQ(4)">
-                    <div class="flex items-center gap-4">
-                        <span class="bg-[#FF6600] text-white p-2 rounded-full">
-                            🌍
-                        </span>
-                        <h3 class="text-lg font-semibold text-[#FF6600]">Community Care</h3>
-                    </div>
-                    <span id="icon-4">▼</span>
-                </button>
-                <div id="faq-4" class="hidden p-4 bg-gray-100">
-                    <p class="text-gray-700 mb-3">Programs designed to educate and empower the community.</p>
+                <!-- Community Care -->
+                <div class="bg-[#ff6600] p-6 rounded-lg shadow-lg animate-fade-up" style="transition-delay: 0.6s">
+                    <h3 class="text-xl font-semibold text-white mb-4">Community Care</h3>
                     <ul class="space-y-2 text-black">
-                        <li>➤ Caregiver Training - Educational workshops.</li>
-                        <li>➤ Health Education - Public awareness programs.</li>
-                        <li>➤ Mental Health - Therapy and counseling.</li>
-                        <li>➤ Preventive Care - Early detection initiatives.</li>
-                        <li>➤ Elderly Care - Senior well-being programs.</li>
+                        <li class="flex items-center gap-2 bg-white/90 p-2 rounded">
+                            <span class="text-[#ff6600]">➤</span>
+                            Caregiver Training
+                        </li>
+                        <li class="flex items-center gap-2 bg-white/90 p-2 rounded">
+                            <span class="text-[#ff6600]">➤</span>
+                            Health Education
+                        </li>
+                        <li class="flex items-center gap-2 bg-white/90 p-2 rounded">
+                            <span class="text-[#ff6600]">➤</span>
+                            Mental Health
+                        </li>
+                        <li class="flex items-center gap-2 bg-white/90 p-2 rounded">
+                            <span class="text-[#ff6600]">➤</span>
+                            Preventive Care
+                        </li>
+                        <li class="flex items-center gap-2 bg-white/90 p-2 rounded">
+                            <span class="text-[#ff6600]">➤</span>
+                            Elderly Care
+                        </li>
                     </ul>
-                </div>
-            </div>
-
-        </div>
-    </div>
-</div>
-
-<!-- JavaScript for FAQ Toggle -->
-<script>
-    function toggleFAQ(index) {
-        let content = document.getElementById("faq-" + index);
-        let icon = document.getElementById("icon-" + index);
-
-        if (content.classList.contains("hidden")) {
-            content.classList.remove("hidden");
-            icon.innerText = "▲";
-        } else {
-            content.classList.add("hidden");
-            icon.innerText = "▼";
-        }
-    }
-</script>
-
-
-
-    <!-- Our Team Section -->
-    <section id="team" class="py-16 bg-gray-100 overflow-hidden">
-        <div class="container mx-auto text-center">
-            <h2 class="text-4xl font-bold text-dark mb-10">Our Team</h2>
-            <div class="relative w-full overflow-hidden">
-                <div class="flex space-x-6 animate-scroll">
-                    <!-- Team Members (Duplicated for smooth scrolling) -->
-                    <div class="team-wrapper flex space-x-6">
-                        <div class="team-card bg-white p-6 shadow-lg rounded-lg text-center">
-                            <img src="Assets/founder.png" alt="Member 1" class="w-32 h-32 mx-auto rounded-full mb-4">
-                            <h3 class="text-xl font-semibold">John Doe</h3>
-                            <p class="text-gray-600">Founder & CEO</p>
-                        </div>
-                        <div class="team-card bg-white p-6 shadow-lg rounded-lg text-center">
-                            <img src="Assets/founder.png" alt="Member 2" class="w-32 h-32 mx-auto rounded-full mb-4">
-                            <h3 class="text-xl font-semibold">Isaac Muteru</h3>
-                            <p class="text-gray-600">Operations Manager</p>
-                        </div>
-                        <div class="team-card bg-white p-6 shadow-lg rounded-lg text-center">
-                            <img src="Assets/founder.png" alt="Member 3" class="w-32 h-32 mx-auto rounded-full mb-4">
-                            <h3 class="text-xl font-semibold">Michael Johnson</h3>
-                            <p class="text-gray-600">Community Outreach</p>
-                        </div>
-                        <div class="team-card bg-white p-6 shadow-lg rounded-lg text-center">
-                            <img src="Assets/founder.png" alt="Member 4" class="w-32 h-32 mx-auto rounded-full mb-4">
-                            <h3 class="text-xl font-semibold">Emily Brown</h3>
-                            <p class="text-gray-600">Health Program Coordinator</p>
-                        </div>
-                        <div class="team-card bg-white p-6 shadow-lg rounded-lg text-center">
-                            <img src="Assets/founder.png" alt="Member 5" class="w-32 h-32 mx-auto rounded-full mb-4">
-                            <h3 class="text-xl font-semibold">David Wilson</h3>
-                            <p class="text-gray-600">Disability Support Lead</p>
-                        </div>
-                        <!-- Duplicate the same team members for seamless looping -->
-                        <div class="team-card bg-white p-6 shadow-lg rounded-lg text-center">
-                            <img src="Assets/founder.png" alt="Member 2" class="w-32 h-32 mx-auto rounded-full mb-4">
-                            <h3 class="text-xl font-semibold">Isaac Muteru</h3>
-                            <p class="text-gray-600">Operations Manager</p>
-                        </div>
-                        <div class="team-card bg-white p-6 shadow-lg rounded-lg text-center">
-                            <img src="Assets/founder.png" alt="Member 3" class="w-32 h-32 mx-auto rounded-full mb-4">
-                            <h3 class="text-xl font-semibold">Michael Johnson</h3>
-                            <p class="text-gray-600">Community Outreach</p>
-                        </div>
-                        <div class="team-card bg-white p-6 shadow-lg rounded-lg text-center">
-                            <img src="Assets/founder.png" alt="Member 4" class="w-32 h-32 mx-auto rounded-full mb-4">
-                            <h3 class="text-xl font-semibold">Emily Brown</h3>
-                            <p class="text-gray-600">Health Program Coordinator</p>
-                        </div>
-                        <div class="team-card bg-white p-6 shadow-lg rounded-lg text-center">
-                            <img src="Assets/founder.png" alt="Member 5" class="w-32 h-32 mx-auto rounded-full mb-4">
-                            <h3 class="text-xl font-semibold">David Wilson</h3>
-                            <p class="text-gray-600">Disability Support Lead</p>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
 
    <!-- Flagship Programs Section -->
     <section id="programs" class="py-24 bg-gray-100">
@@ -484,6 +352,17 @@
 
             <div class="grid gap-10 md:grid-cols-2 lg:grid-cols-3">
                 <!-- Card 1: Skill Up - Step Up Campaign -->
+                <div class="bg-white p-8 rounded-lg shadow-md text-center transition-transform transform hover:scale-105 animate-fade-up" style="transition-delay: 0.2s">
+                    <div class="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary">
+                            <path d="M8 12l2 2 4-4M20 12a8 8 0 1 1-16 0 8 8 0 0 1 16 0z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-4 text-dark">Skill Up - Step Up</h3>
+                    <p class="text-gray-600 leading-relaxed">Providing education, training, and employment opportunities for youth and women to foster self-reliance and growth.</p>
+                </div>
+
+                <!-- Card 2: Healthy Communities Program -->
                 <div class="bg-white p-8 rounded-lg shadow-md text-center transition-transform transform hover:scale-105 animate-fade-up" style="transition-delay: 0.4s">
                     <div class="w-20 h-20 bg-secondary/10 rounded-full flex items-center justify-center mx-auto mb-6">
                         <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-secondary">
@@ -512,11 +391,20 @@
                             <path d="M12 2a10 10 0 0 1 10 10v6H2v-6A10 10 0 0 1 12 2zM5 22h14"/>
                         </svg>
                     </div>
-                    <h3 class="text-2xl font-semibold mb-4 text-dark">Home Care</h3>
-                    <p class="text-gray-600 leading-relaxed">Offering care to patients and those in need of assistance at the comfort of their homes</p>
+                    <h3 class="text-2xl font-semibold mb-4 text-dark">Agribusiness Development</h3>
+                    <p class="text-gray-600 leading-relaxed">Empowering farmers with sustainable agricultural practices, market access, and financial support.</p>
                 </div>
 
-                
+                <!-- Card 5: Social Justice Advocacy -->
+                <div class="bg-white p-8 rounded-lg shadow-md text-center transition-transform transform hover:scale-105 animate-fade-up" style="transition-delay: 1s">
+                    <div class="w-20 h-20 bg-red-500/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-red-500">
+                            <path d="M8 16h8M8 12h8m-8-4h8M5 3h14l1 2H4l1-2zm0 0l2 18h10l2-18H5z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-4 text-dark">Social Justice Advocacy</h3>
+                    <p class="text-gray-600 leading-relaxed">Defending human rights, equality, and dignity through legal aid, awareness, and policy reforms.</p>
+                </div>
             </div>
         </div>
     </section>
@@ -641,115 +529,6 @@
         </div>
     </section>
 
-    <!-- Gallery Section -->
-    <section id="gallery" class="py-16 bg-white">
-        <div class="container mx-auto text-center">
-            <h2 class="text-4xl font-bold text-dark mb-10">Gallery</h2>
-
-            <!-- Grid Container -->
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 px-4">
-                <!-- Gallery Item -->
-                <div class="gallery-item overflow-hidden rounded-lg shadow-lg">
-                    <img src="Assets/voluteer.jpg" alt="Gallery Image 1" class="w-full h-64 object-cover cursor-pointer" onclick="openLightbox('gallery1.jpg')">
-                </div>
-
-                <div class="gallery-item overflow-hidden rounded-lg shadow-lg">
-                    <img src="Assets/voluteer.jpg" alt="Gallery Image 2" class="w-full h-64 object-cover cursor-pointer" onclick="openLightbox('gallery2.jpg')">
-                </div>
-
-                <div class="gallery-item overflow-hidden rounded-lg shadow-lg">
-                    <img src="Assets/voluteer.jpg" alt="Gallery Image 3" class="w-full h-64 object-cover cursor-pointer" onclick="openLightbox('gallery3.jpg')">
-                </div>
-
-                <div class="gallery-item overflow-hidden rounded-lg shadow-lg">
-                    <img src="Assets/voluteer.jpg" alt="Gallery Image 4" class="w-full h-64 object-cover cursor-pointer" onclick="openLightbox('gallery4.jpg')">
-                </div>
-
-                <div class="gallery-item overflow-hidden rounded-lg shadow-lg">
-                    <img src="Assets/voluteer.jpg" alt="Gallery Image 5" class="w-full h-64 object-cover cursor-pointer" onclick="openLightbox('gallery5.jpg')">
-                </div>
-
-                <div class="gallery-item overflow-hidden rounded-lg shadow-lg">
-                    <img src="Assets/voluteer.jpg" alt="Gallery Image 6" class="w-full h-64 object-cover cursor-pointer" onclick="openLightbox('gallery6.jpg')">
-                </div>
-
-                <div class="gallery-item overflow-hidden rounded-lg shadow-lg">
-                    <img src="Assets/voluteer.jpg" alt="Gallery Image 7" class="w-full h-64 object-cover cursor-pointer" onclick="openLightbox('gallery7.jpg')">
-                </div>
-
-                <div class="gallery-item overflow-hidden rounded-lg shadow-lg">
-                    <img src="Assets/voluteer.jpg" alt="Gallery Image 8" class="w-full h-64 object-cover cursor-pointer" onclick="openLightbox('gallery8.jpg')">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    
-    <!-- Lightbox Modal -->
-    <div id="lightbox" class="fixed top-0 left-0 w-full h-full bg-black/80 flex justify-center items-center hidden z-50">
-        <span class="absolute top-5 right-5 text-white text-3xl cursor-pointer" onclick="closeLightbox()">✖</span>
-        <img id="lightboxImage" class="max-w-[90%] max-h-[80%] rounded-lg shadow-lg">
-    </div>
-
-    <!-- CTA Section - Join Us -->
-    <div class="bg-[#006633] text-white py-16 text-center px-6">
-        <div class="container mx-auto">
-            <h2 class="text-4xl font-bold mb-4">Join Us in Making a Difference</h2>
-            <p class="text-lg max-w-2xl mx-auto mb-6">
-                Be a part of our mission to uplift communities through empowerment, education, and support.
-            </p>
-            <div class="flex justify-center gap-6">
-                <a href="volunteer.html" class="bg-[#FF6600] text-white font-semibold px-6 py-3 rounded-lg shadow-md hover:bg-[#CC5500] transition-all">
-                    Become a Volunteer
-                </a>
-                <a href="partner.html" class="border-2 border-white text-white font-semibold px-6 py-3 rounded-lg shadow-md hover:bg-white hover:text-[#006633] transition-all">
-                    Partner with Us
-                </a>
-            </div>
-        </div>
-    </div>
-
-    <!-- Blog Section -->
-    <section id="blog" class="py-16 bg-gray-100">
-        <div class="container mx-auto text-center">
-            <h2 class="text-4xl font-bold text-dark mb-10">Our Blog</h2>
-
-            <!-- Blog Grid -->
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 px-4">
-                <!-- Blog Post 1 -->
-                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-                    <img src="Assets/home_care.jpg" alt="Blog 1" class="w-full h-52 object-cover">
-                    <div class="p-6">
-                        <h3 class="text-xl font-semibold mb-2">Empowering Communities for a Brighter Future</h3>
-                        <p class="text-gray-600 mb-4">Discover how our initiatives are changing lives through sustainable development...</p>
-                        <a href="#" class="text-primary font-bold hover:underline">Read More</a>
-                    </div>
-                </div>
-
-                <!-- Blog Post 2 -->
-                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-                    <img src="Assets/home_care.jpg" alt="Blog 2" class="w-full h-52 object-cover">
-                    <div class="p-6">
-                        <h3 class="text-xl font-semibold mb-2">Breaking Barriers: Supporting People with Disabilities</h3>
-                        <p class="text-gray-600 mb-4">Learn about our efforts in creating inclusive opportunities for individuals with disabilities...</p>
-                        <a href="#" class="text-primary font-bold hover:underline">Read More</a>
-                    </div>
-                </div>
-
-                <!-- Blog Post 3 -->
-                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-                    <img src="Assets/home_care.jpg" alt="Blog 3" class="w-full h-52 object-cover">
-                    <div class="p-6">
-                        <h3 class="text-xl font-semibold mb-2">Healthcare at Home: Making a Difference</h3>
-                        <p class="text-gray-600 mb-4">How our home health initiatives are bringing essential services closer to those in need...</p>
-                        <a href="#" class="text-primary font-bold hover:underline">Read More</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
     <!-- Contact Form Section -->
     <section id="contact" class="py-24 bg-gradient-to-br from-[#E3F2FD] to-[#F1F8E9]">
         <div class="container mx-auto px-6 md:px-12 lg:px-16">
@@ -834,35 +613,22 @@
     <!-- Footer Section -->
     <footer class="bg-[#1A1A1A] text-white py-12">
         <div class="container mx-auto px-6 md:px-12 lg:px-16">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 text-center md:text-left">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 text-center md:text-left">
                 
                 <!-- Company Logo & Info -->
                 <div class="flex flex-col items-center md:items-start">
                     <img src="Assets/footer_logo_orange.png" alt="Empowers Global Logo" class="w-32 mb-4">
                     <h3 class="text-2xl font-semibold text-[#006633]">Empowers Global Bridge Initiative</h3>
-                    <p class="text-gray-300 mt-2 text-lg font-medium max-w-xs">
-                        Empowering communities through healthcare, home support, and inclusion for people with disabilities.
-                    </p>
-                </div>
-
-                <!-- Quick Links -->
-                <div>
-                    <h3 class="text-xl font-semibold">Quick Links</h3>
-                    <ul class="mt-3 space-y-2 text-gray-400">
-                        <li><a href="gallery.html" class="hover:text-gray-200 transition">📷 Gallery</a></li>
-                        <li><a href="news.html" class="hover:text-gray-200 transition">📰 News</a></li>
-                        <li><a href="careers.html" class="hover:text-gray-200 transition">💼 Careers</a></li>
-                        <li><a href="donate.html" class="hover:text-gray-200 transition">❤️ Donate</a></li>
-                    </ul>
+                    <p class="text-gray-400 mt-2 text-sm">Impacting Lives, Inspiring Change.</p>
                 </div>
 
                 <!-- Contact Information -->
                 <div>
                     <h3 class="text-xl font-semibold">Contact Us</h3>
                     <div class="mt-3 space-y-2 text-gray-400">
-                        <p>📞 <a href="tel:+254717720683" class="hover:text-gray-200 transition">0741924621</a></p>
-                        <p>📞 <a href="tel:+254748455493" class="hover:text-gray-200 transition">0722687025</a></p>
-                        <p>📞 <a href="tel:+254785306002" class="hover:text-gray-200 transition">+254 0785306002 (WhatsApp)</a></p>
+                        <p>📞 <a href="tel:+254717720683" class="hover:text-gray-200 transition">0717 720 683</a></p>
+                        <p>📞 <a href="tel:+254748455493" class="hover:text-gray-200 transition">0748 455 493</a></p>
+                        <p>📞 <a href="tel:+254785306002" class="hover:text-gray-200 transition">+254 785 306 002</a></p>
                         <p>✉️ <a href="mailto:info@empowersglobal.org" class="hover:text-gray-200 transition">info@empowersglobal.org</a></p>
                         <p>✉️ <a href="mailto:customercare@empowersglobal.org" class="hover:text-gray-200 transition">customercare@empowersglobal.org</a></p>
                     </div>
@@ -873,16 +639,16 @@
                     <h3 class="text-xl font-semibold">Follow Us</h3>
                     <div class="flex justify-center md:justify-start mt-4 space-x-5">
                         <a href="#" class="text-gray-400 hover:text-white transition">
-                            <img src="Assets/facebook.svg" alt="Facebook" class="h-6">
+                            <img src="Assets/facebook.svg" alt="" srcset="" class="h-6">
                         </a>
                         <a href="#" class="text-gray-400 hover:text-white transition">
-                            <img src="Assets/tiktok.svg" alt="TikTok" class="h-6">
+                            <img src="Assets/tiktok.svg" alt="" srcset="" class="h-6">
                         </a>
                         <a href="#" class="text-gray-400 hover:text-white transition">
-                            <img src="Assets/twitter.svg" alt="Twitter" class="h-6">
+                            <img src="Assets/twitter.svg" alt="" srcset="" class="h-6">
                         </a>
                         <a href="#" class="text-gray-400 hover:text-white transition">
-                            <img src="Assets/linkedin.svg" alt="LinkedIn" class="h-6">
+                            <img src="Assets/linkedin.svg" alt="" srcset="" class="h-6">
                         </a>
                     </div>
                 </div>
@@ -902,7 +668,6 @@
             </a>
         </div>
     </footer>
-
 
 
 
