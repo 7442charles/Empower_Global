@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="EmpowerGlobal Bridge Initiative (EBI) is dedicated to eradicating poverty and empowering communities through education, healthcare, and sustainable development.">
+        <meta name="author" content="EmpowerGlobal Bridge Initiative">
+        <meta name="keywords" content="EmpowerGlobal, EBI, NGO, poverty eradication, community empowerment, education, healthcare, sustainable development">
+        <title>EmpowerGlobal Bridge Initiative (EBI)</title>
+
+        <!-- Open Graph / Facebook -->
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="https://empowersglobal.org">
+        <meta property="og:title" content="EmpowerGlobal Bridge Initiative (EBI)">
+        <meta property="og:description" content="Empowering People, Transforming Lives. Join EBI in making a lasting difference.">
+        <meta property="og:image" content="https://raw.githubusercontent.com/7442charles/Empower_Global/refs/heads/main/Assets/logo_white_bg.jpg"> <!--Add the actual image URL-->
+
+        <!-- Twitter -->
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:url" content="https://empowersglobal.org">
+        <meta name="twitter:title" content="EmpowerGlobal Bridge Initiative (EBI)">
+        <meta name="twitter:description" content="Empowering People, Transforming Lives. Join EBI in making a lasting difference.">
+        <meta name="twitter:image" content="https://raw.githubusercontent.com/7442charles/Empower_Global/refs/heads/main/Assets/logo_white_bg.jpg"> <!--Add the actual image URL-->
+
+
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+        <link rel="shortcut icon" href="Assets/logo_transparent.png" type="image/x-png">
+
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link rel="stylesheet" href="Assets/css/styles.css">
+
+        <script>
+            tailwind.config = {
+                theme: {
+                    extend: {
+                        colors: {
+                            primary: '#003399',
+                            secondary: '#006633',
+                            accent: '#ff0000',
+                            orange: '#ff6600',
+                            dark: '#1a1a1a',
+                        },
+                        fontFamily: {
+                            montserrat: ['Montserrat', 'sans-serif'],
+                        },
+                    }
+                }
+            }
+        </script>
+        <style>
+            html {
+                font-family: 'Montserrat', sans-serif;
+                scroll-behavior: smooth;
+            }
+            .animate-fade-up {
+                opacity: 0;
+                transform: translateY(30px);
+                transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+            }
+            .animate-fade-right {
+                opacity: 0;
+                transform: translateX(-30px);
+                transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+            }
+            .animate-fade-left {
+                opacity: 0;
+                transform: translateX(30px);
+                transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+            }
+            .animate-visible {
+                opacity: 1;
+                transform: translate(0);
+            }
+        </style>
+    </head>
+<body class="font-montserrat">
+    <!-- Navbar -->
+    <nav class="fixed w-full bg-white/95 backdrop-blur-md shadow-md z-50">
+        <div class="container mx-auto px-6 lg:px-12">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo and Name -->
+                <a href="#" class="text-2xl font-bold text-[#003399] flex items-center gap-3">
+                    <img src="Assets/logo_transparent.png" alt="EBI Logo" class="h-12 w-auto">
+                    <span class="text-[#003399] tracking-wide">E</span> 
+                    <span class="text-[#006633]">B</span> 
+                    <span class="text-[#ff6600]">I</span>
+                </a>
+    
+                <!-- Mobile Menu Button -->
+                <button id="menuButton" class="md:hidden text-gray-600 hover:text-[#003399] focus:outline-none">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+    
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="index.html" class="text-[#1A1A1A] font-medium hover:text-[#FF6600] transition-all">Home</a>
+                    <!-- About Us Dropdown (Desktop) -->
+                    <div class="relative group">
+                        <a href="About_us.html" class="text-[#1A1A1A] font-medium hover:text-[#FF6600] transition-all flex items-center">
+                            About Us
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                            </svg>
+                        </a>
+
+                        <!-- Smooth Dropdown Menu -->
+                        <div class="absolute left-0 mt-2 w-48 bg-white shadow-lg rounded-lg py-2 opacity-0 invisible transition-all duration-200 ease-in-out group-hover:opacity-100 group-hover:visible pointer-events-auto">
+                            <a href="About_us.html#who-we-are" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">How We Work</a>
+                            <a href="About_us.html#founder" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Funders' Story</a>
+                            <a href="About_us.html#team" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Our Team</a>
+                        </div>
+                    </div>
+
+                    <div class="relative group">
+                        <a href="our_work.html" class="text-[#1A1A1A] font-medium hover:text-[#FF6600] transition-all flex items-center">
+                            Our Work
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                            </svg>
+                        </a>
+
+                        <!-- Smooth Dropdown Menu -->
+                        <div class="absolute left-0 mt-2 w-56 bg-white shadow-lg rounded-lg py-2 opacity-0 invisible transition-all duration-200 ease-in-out group-hover:opacity-100 group-hover:visible pointer-events-auto">
+                            <a href="our_work.html#pwd-inclusion" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">PWD Inclusion</a>
+                            <a href="our_work.html#skill-up" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Skill UP</a>
+                            <a href="our_work.html#microfinance" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Microfinance Empowerment</a>
+                            <a href="our_work.html#community-health" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Community Health</a>
+                        </div>
+                    </div>
+
+                    <a href="#blog" class="text-gray-700 font-medium hover:text-[#FF6600] transition-all">Blog</a>
+                    <a href="#gallery" class="text-gray-700 font-medium hover:text-[#FF6600] transition-all">Gallery</a>
+                    <a href="#contact" class="text-[#1A1A1A] font-medium hover:text-[#FF6600] transition-all">Contact</a>
+    
+                    <!-- Donate Button (CTA) -->
+                    <a href="donate.html" class="bg-[#FF6600] text-white font-semibold px-5 py-2 rounded-lg shadow-lg hover:bg-[#CC5500] transition-all">
+                        Donate
+                    </a>
+                </div>
+            </div>
+    
+            <!-- Mobile Menu -->
+            <div id="mobileMenu" class="hidden md:hidden flex flex-col space-y-3 bg-white py-4 px-6 shadow-md rounded-lg absolute w-full left-0 top-16">
+                <a href="index.html" class="text-gray-700 font-medium hover:text-[#FF6600] transition-all">Home</a>
+                <div class="relative">
+                    <button id="mobileDropdownButton" class="w-full text-left text-gray-700 font-medium hover:text-[#FF6600] transition-all flex items-center">
+                        About Us
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                        </svg>
+                    </button>
+                    <div id="mobileDropdown" class="hidden flex flex-col bg-white shadow-md rounded-lg mt-2 py-2">
+                        <a href="About_us.html#who-we-are" class="px-4 py-2 text-gray-700 hover:bg-gray-100">Who We Are</a>
+                        <a href="About_us.html#founder" class="px-4 py-2 text-gray-700 hover:bg-gray-100">Funders' Story</a>
+                        <a href="About_us.html#team" class="px-4 py-2 text-gray-700 hover:bg-gray-100">Our Team</a>
+                    </div>
+                </div>
+                <a href="#services" class="text-gray-700 font-medium hover:text-[#FF6600] transition-all">Services</a>
+                <a href="#programs" class="text-gray-700 font-medium hover:text-[#FF6600] transition-all">Programs</a>
+                <a href="#blog" class="text-gray-700 font-medium hover:text-[#FF6600] transition-all">Blog</a>
+                <a href="#gallery" class="text-gray-700 font-medium hover:text-[#FF6600] transition-all">Gallery</a>
+                <a href="#contact" class="text-gray-700 font-medium hover:text-[#FF6600] transition-all">Contact</a>
+                <!-- Donate Button for Mobile -->
+                <a href="donate.html" class="bg-[#FF6600] text-white text-center font-semibold px-5 py-2 rounded-lg shadow-lg hover:bg-[#CC5500] transition-all">
+                    Donate
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Who We Are Section -->
+    <section id="who-we-are" class="py-24 bg-white">
+        <div class="container mx-auto px-6 md:px-12 lg:px-20">
+            <!-- Section Heading -->
+            <h2 class="text-4xl md:text-5xl font-bold text-center mb-12 animate-fade-up">
+                <span class="text-[#003399]">Who</span>  
+                <span class="relative inline-block text-[#006633]">
+                    We Are
+                    <span class="absolute left-0 bottom-0 w-full h-1 bg-[#FF6600] rounded-full"></span>
+                </span>  
+            </h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                
+                <!-- Left Side: Text Content -->
+                <div class="animate-fade-up">
+                    <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+                        EmpowerGlobal Bridge Initiative (EGBI) is a non-governmental organization founded in 2024 with a vision to empower people and communities facing poverty, illiteracy, disability, disease, and social injustice.
+                    </p>
+                    <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+                        Our mission is to inspire breakthroughs in the way the world treats vulnerable communities and to achieve immediate and lasting change in their lives.
+                    </p>
+                    
+                    <!-- Key Focus Areas -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
+                        <div class="flex items-center gap-4">
+                            <span class="w-12 h-12 bg-[#003399] text-white flex items-center justify-center text-2xl font-bold rounded-full">🎓</span>
+                            <h3 class="text-xl font-semibold text-[#1A1A1A]">Education</h3>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <span class="w-12 h-12 bg-[#006633] text-white flex items-center justify-center text-2xl font-bold rounded-full">❤️</span>
+                            <h3 class="text-xl font-semibold text-[#1A1A1A]">Health</h3>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <span class="w-12 h-12 bg-[#FF6600] text-white flex items-center justify-center text-2xl font-bold rounded-full">💰</span>
+                            <h3 class="text-xl font-semibold text-[#1A1A1A]">Microfinancing</h3>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <span class="w-12 h-12 bg-[#FF0000] text-white flex items-center justify-center text-2xl font-bold rounded-full">⚖️</span>
+                            <h3 class="text-xl font-semibold text-[#1A1A1A]">Social Justice</h3>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Side: Image -->
+                <div class="relative">
+                    <img 
+                        src="Assets/empowering_communities.jpg" 
+                        alt="Empowering Communities" 
+                        class="rounded-lg shadow-lg hover:shadow-2xl transition-transform hover:scale-105 duration-300"
+                    >
+                    <div class="absolute top-4 left-4 bg-[#FF6600] text-white px-4 py-2 rounded-full text-sm font-semibold shadow-lg">
+                        Empowering Communities
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Founder’s Story Section -->
+    <section id="founder" class="py-24 bg-white">
+        <div class="container mx-auto px-6 md:px-12 lg:px-20">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                
+                <!-- Left Side: Founder Image -->
+                <div class="relative">
+                    <img 
+                        src="Assets/founder.png" 
+                        alt="Founder of Empowers Global Bridge Initiative" 
+                        class="rounded-lg shadow-lg hover:shadow-2xl transition-transform hover:scale-105 duration-300"
+                    >
+                    <div class="absolute top-4 left-4 bg-[#FF6600] text-white px-4 py-2 rounded-full text-sm font-semibold shadow-lg">
+                        A Vision for Change
+                    </div>
+                </div>
+
+                <!-- Right Side: Text Content -->
+                <div>
+                    <h2 class="text-4xl font-bold mb-6 leading-tight animate-fade-up">
+                        Our Founder’s <span class="text-[#003399]">Journey</span>
+                    </h2>
+                    <p class="text-lg text-gray-700 mb-6 leading-relaxed animate-fade-up" style="transition-delay: 0.2s">
+                        <strong class="text-[#006633]">Empowers Global Bridge Initiative (EGBI)</strong> was founded with a deep commitment to social transformation. Driven by compassion and a desire to create lasting change, our founder saw the urgent need for a bridge between resources and underserved communities.
+                    </p>
+                    <p class="text-lg text-gray-700 mb-6 leading-relaxed animate-fade-up" style="transition-delay: 0.4s">
+                        Through <b>community-driven programs</b> and <b>strategic partnerships</b>, we have empowered individuals by providing access to healthcare, education, and support systems, ensuring <b>a better tomorrow for all.</b>
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Our Team Section -->
+    <section id="team" class="py-24 bg-white">
+        <div class="container mx-auto px-6 md:px-12 lg:px-20">
+            <!-- Section Heading -->
+            <h2 class="text-4xl md:text-5xl font-bold text-center mb-12 animate-fade-up">
+                <span class="text-[#003399]">Meet</span>  
+                <span class="relative inline-block text-[#006633]">
+                    Our Team
+                    <span class="absolute left-0 bottom-0 w-full h-1 bg-[#FF6600] rounded-full"></span>
+                </span>  
+            </h2>
+
+            <!-- Team Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+                
+                <!-- Team Member 1 -->
+                <div class="bg-gray-100 p-8 rounded-xl shadow-lg text-center hover:shadow-2xl transition-transform hover:scale-105 duration-300">
+                    <img src="Assets/isaac_muteru.jpg" alt="Isaac Muteru" class="w-40 h-40 mx-auto rounded-full mb-6">
+                    <h3 class="text-2xl font-semibold text-[#1A1A1A]">Isaac Muteru</h3>
+                    <p class="text-gray-600 text-lg">Board Member</p>
+                    <p class="text-gray-500 italic mt-4">"True empowerment starts with education and opportunity."</p>
+                </div>
+
+                <!-- Team Member 2 -->
+                <div class="bg-gray-100 p-8 rounded-xl shadow-lg text-center hover:shadow-2xl transition-transform hover:scale-105 duration-300">
+                    <img src="Assets/john_kingori.jpg" alt="John Kingori" class="w-40 h-40 mx-auto rounded-full mb-6">
+                    <h3 class="text-2xl font-semibold text-[#1A1A1A]">John Kingori</h3>
+                    <p class="text-gray-600 text-lg">Board Member</p>
+                    <p class="text-gray-500 italic mt-4">"A better future is built on compassion and action."</p>
+                </div>
+
+                <!-- Team Member 3 -->
+                <div class="bg-gray-100 p-8 rounded-xl shadow-lg text-center hover:shadow-2xl transition-transform hover:scale-105 duration-300">
+                    <img src="Assets/julius.jpg" alt="Julius K Ruteere" class="w-40 h-40 mx-auto rounded-full mb-6">
+                    <h3 class="text-2xl font-semibold text-[#1A1A1A]">Julius K Ruteere</h3>
+                    <p class="text-gray-600 text-lg">Board Chair</p>
+                    <p class="text-gray-500 italic mt-4">"Leading with integrity transforms communities."</p>
+                </div>
+
+                <!-- Team Member 4 -->
+                <div class="bg-gray-100 p-8 rounded-xl shadow-lg text-center hover:shadow-2xl transition-transform hover:scale-105 duration-300">
+                    <img src="Assets/kelvin.jpg" alt="Kelvin K Gakera" class="w-40 h-40 mx-auto rounded-full mb-6">
+                    <h3 class="text-2xl font-semibold text-[#1A1A1A]">Kelvin K Gakera</h3>
+                    <p class="text-gray-600 text-lg">Chief Executive Officer</p>
+                    <p class="text-gray-500 italic mt-4">"Empowerment is not about giving, it's about enabling."</p>
+                </div>
+
+                <!-- Team Member 5 -->
+                <div class="bg-gray-100 p-8 rounded-xl shadow-lg text-center hover:shadow-2xl transition-transform hover:scale-105 duration-300">
+                    <img src="Assets/Ezekiel.jpg" alt="Ezakiel Omwale" class="w-40 h-40 mx-auto rounded-full mb-6">
+                    <h3 class="text-2xl font-semibold text-[#1A1A1A]">Ezakiel Omwale</h3>
+                    <p class="text-gray-600 text-lg">Board Member</p>
+                    <p class="text-gray-500 italic mt-4">"Together, we can turn hope into reality."</p>
+                </div>
+
+                <!-- Team Member 6 -->
+                <div class="bg-gray-100 p-8 rounded-xl shadow-lg text-center hover:shadow-2xl transition-transform hover:scale-105 duration-300">
+                    <img src="Assets/gitau.jpg" alt="Isaac N Gitau" class="w-40 h-40 mx-auto rounded-full mb-6">
+                    <h3 class="text-2xl font-semibold text-[#1A1A1A]">Isaac N Gitau</h3>
+                    <p class="text-gray-600 text-lg">Health Program Coordinator</p>
+                    <p class="text-gray-500 italic mt-4">"Empowering communities with knowledge and care ensures a healthier, stronger future for everyone."</p>
+                </div>
+
+                <!-- Team Member 7 -->
+                <div class="bg-gray-100 p-8 rounded-xl shadow-lg text-center hover:shadow-2xl transition-transform hover:scale-105 duration-300">
+                    <img src="Assets/Ruth.jpg" alt="Ruth Wangari" class="w-40 h-40 mx-auto rounded-full mb-6">
+                    <h3 class="text-2xl font-semibold text-[#1A1A1A]">Ruth Wangari</h3>
+                    <p class="text-gray-600 text-lg"> Board Secretary</p>
+                    <p class="text-gray-500 italic mt-4">"Together, we bridge gaps in healthcare, fostering dignity and well-being for all"</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+
+    <!-- Footer Section -->
+    <footer class="bg-[#1A1A1A] text-white py-12">
+        <div class="container mx-auto px-6 md:px-12 lg:px-16">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 text-center md:text-left">
+                
+                <!-- Company Logo & Info -->
+                <div class="flex flex-col items-center md:items-start">
+                    <img src="Assets/footer_logo_orange.png" alt="Empowers Global Logo" class="w-32 mb-4">
+                    <h3 class="text-2xl font-semibold text-[#006633]">Empowers Global Bridge Initiative</h3>
+                    <p class="text-gray-300 mt-2 text-lg font-medium max-w-xs">
+                        Empowering communities through healthcare, home support, and inclusion for people with disabilities.
+                    </p>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="text-xl font-semibold">Quick Links</h3>
+                    <ul class="mt-3 space-y-2 text-gray-400">
+                        <li><a href="gallery.html" class="hover:text-gray-200 transition">📷 Gallery</a></li>
+                        <li><a href="news.html" class="hover:text-gray-200 transition">📰 News</a></li>
+                        <li><a href="careers.html" class="hover:text-gray-200 transition">💼 Careers</a></li>
+                        <li><a href="donate.html" class="hover:text-gray-200 transition">❤️ Donate</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Information -->
+                <div>
+                    <h3 class="text-xl font-semibold">Contact Us</h3>
+                    <div class="mt-3 space-y-2 text-gray-400">
+                        <p>📞 <a href="tel:+254717720683" class="hover:text-gray-200 transition">0741924621</a></p>
+                        <p>📞 <a href="tel:+254748455493" class="hover:text-gray-200 transition">0722687025</a></p>
+                        <p>📞 <a href="tel:+254785306002" class="hover:text-gray-200 transition">+254 0785306002 (WhatsApp)</a></p>
+                        <p>✉️ <a href="mailto:info@empowersglobal.org" class="hover:text-gray-200 transition">info@empowersglobal.org</a></p>
+                        <p>✉️ <a href="mailto:customercare@empowersglobal.org" class="hover:text-gray-200 transition">customercare@empowersglobal.org</a></p>
+                    </div>
+                </div>
+
+                <!-- Social Media Links -->
+                <div>
+                    <h3 class="text-xl font-semibold">Follow Us</h3>
+                    <div class="flex justify-center md:justify-start mt-4 space-x-5">
+                        <a href="#" class="text-gray-400 hover:text-white transition">
+                            <img src="Assets/facebook.svg" alt="Facebook" class="h-6">
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition">
+                            <img src="Assets/tiktok.svg" alt="TikTok" class="h-6">
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition">
+                            <img src="Assets/twitter.svg" alt="Twitter" class="h-6">
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition">
+                            <img src="Assets/linkedin.svg" alt="LinkedIn" class="h-6">
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Divider -->
+            <div class="border-t border-gray-600 mt-10"></div>
+
+        </div>
+
+        <!-- Credits Section -->
+        <div class="bg-[#333333] py-4 text-center text-gray-300 font-semibold text-sm mt-6">
+            Developed by 
+            <a href="https://quickofficepointe.co.ke" target="_blank" class="text-[#006633] hover:text-white transition">
+                QuickOfficePointe
+            </a>
+        </div>
+    </footer>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animate-visible');
+                    }
+                });
+            }, {
+                threshold: 0.1,
+                rootMargin: '50px',
+            });
+
+            document.querySelectorAll('.animate-fade-up, .animate-fade-right, .animate-fade-left').forEach((element) => {
+                observer.observe(element);
+            });
+
+            // Mobile Menu Toggle
+            const menuButton = document.getElementById('menuButton');
+            const mobileMenu = document.getElementById('mobileMenu');
+
+            menuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+
+            // Close mobile menu when clicking on a link
+            document.querySelectorAll('#mobileMenu a').forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                });
+            });
+        });
+    </script>
+</body>
+</html>

@@ -86,37 +86,81 @@
                     <span class="text-[#006633]">B</span> 
                     <span class="text-[#ff6600]">I</span>
                 </a>
-
+    
                 <!-- Mobile Menu Button -->
                 <button id="menuButton" class="md:hidden text-gray-600 hover:text-[#003399] focus:outline-none">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <path d="M4 6h16M4 12h16M4 18h16" />
                     </svg>
                 </button>
-
+    
                 <!-- Desktop Menu -->
                 <div class="hidden md:flex space-x-8 items-center">
-                    <a href="#about" class="text-[#1A1A1A] font-medium hover:text-[#FF6600] transition-all">About Us</a>
-                    <a href="#services" class="text-[#1A1A1A] font-medium hover:text-[#FF6600] transition-all">Services</a>
-                    <a href="#programs" class="text-gray-700 font-medium hover:text-[#FF6600] transition-all">Programs</a>
-                    <a href="#team" class="text-gray-700 font-medium hover:text-[#FF6600] transition-all">Our Team</a>
+                    <a href="index.html" class="text-[#1A1A1A] font-medium hover:text-[#FF6600] transition-all">Home</a>
+                    <!-- About Us Dropdown (Desktop) -->
+                    <div class="relative group">
+                        <a href="About_us.html" class="text-[#1A1A1A] font-medium hover:text-[#FF6600] transition-all flex items-center">
+                            About Us
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                            </svg>
+                        </a>
+
+                        <!-- Smooth Dropdown Menu -->
+                        <div class="absolute left-0 mt-2 w-48 bg-white shadow-lg rounded-lg py-2 opacity-0 invisible transition-all duration-200 ease-in-out group-hover:opacity-100 group-hover:visible pointer-events-auto">
+                            <a href="About_us.html#who-we-are" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">How We Work</a>
+                            <a href="About_us.html#founder" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Funders' Story</a>
+                            <a href="About_us.html#team" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Our Team</a>
+                        </div>
+                    </div>
+
+                    <!-- Our Work Dropdown (Desktop) -->
+                    <div class="relative group">
+                        <a href="our_work.html" class="text-[#1A1A1A] font-medium hover:text-[#FF6600] transition-all flex items-center">
+                            Our Work
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                            </svg>
+                        </a>
+
+                        <!-- Smooth Dropdown Menu -->
+                        <div class="absolute left-0 mt-2 w-56 bg-white shadow-lg rounded-lg py-2 opacity-0 invisible transition-all duration-200 ease-in-out group-hover:opacity-100 group-hover:visible pointer-events-auto">
+                            <a href="our_work.html#pwd-inclusion" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">PWD Inclusion</a>
+                            <a href="our_work.html#skill-up" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Skill UP</a>
+                            <a href="our_work.html#microfinance" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Microfinance Empowerment</a>
+                            <a href="our_work.html#community-health" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Community Health</a>
+                        </div>
+                    </div>
+
                     <a href="#blog" class="text-gray-700 font-medium hover:text-[#FF6600] transition-all">Blog</a>
                     <a href="#gallery" class="text-gray-700 font-medium hover:text-[#FF6600] transition-all">Gallery</a>
                     <a href="#contact" class="text-[#1A1A1A] font-medium hover:text-[#FF6600] transition-all">Contact</a>
-
+    
                     <!-- Donate Button (CTA) -->
                     <a href="donate.html" class="bg-[#FF6600] text-white font-semibold px-5 py-2 rounded-lg shadow-lg hover:bg-[#CC5500] transition-all">
                         Donate
                     </a>
                 </div>
             </div>
-
+    
             <!-- Mobile Menu -->
             <div id="mobileMenu" class="hidden md:hidden flex flex-col space-y-3 bg-white py-4 px-6 shadow-md rounded-lg absolute w-full left-0 top-16">
-                <a href="#about" class="text-gray-700 font-medium hover:text-[#FF6600] transition-all">About Us</a>
+                <a href="index.html" class="text-gray-700 font-medium hover:text-[#FF6600] transition-all">Home</a>
+                <div class="relative">
+                    <button id="mobileDropdownButton" class="w-full text-left text-gray-700 font-medium hover:text-[#FF6600] transition-all flex items-center">
+                        About Us
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                        </svg>
+                    </button>
+                    <div id="mobileDropdown" class="hidden flex flex-col bg-white shadow-md rounded-lg mt-2 py-2">
+                        <a href="About_us.html#who-we-are" class="px-4 py-2 text-gray-700 hover:bg-gray-100">Who We Are</a>
+                        <a href="About_us.html#founder" class="px-4 py-2 text-gray-700 hover:bg-gray-100">Funders' Story</a>
+                        <a href="About_us.html#team" class="px-4 py-2 text-gray-700 hover:bg-gray-100">Our Team</a>
+                    </div>
+                </div>
                 <a href="#services" class="text-gray-700 font-medium hover:text-[#FF6600] transition-all">Services</a>
                 <a href="#programs" class="text-gray-700 font-medium hover:text-[#FF6600] transition-all">Programs</a>
-                <a href="#team" class="text-gray-700 font-medium hover:text-[#FF6600] transition-all">Team</a>
                 <a href="#blog" class="text-gray-700 font-medium hover:text-[#FF6600] transition-all">Blog</a>
                 <a href="#gallery" class="text-gray-700 font-medium hover:text-[#FF6600] transition-all">Gallery</a>
                 <a href="#contact" class="text-gray-700 font-medium hover:text-[#FF6600] transition-all">Contact</a>
@@ -127,7 +171,6 @@
             </div>
         </div>
     </nav>
-
 
     <!-- Hero Section -->
     <div class="min-h-screen relative bg-gradient-to-br from-primary to-secondary overflow-hidden">
@@ -156,52 +199,42 @@
         </div>
     </div>
 
-    <!-- About Us Section -->
-    <section id="about" class="py-24 bg-gray-100">
-        <div class="container mx-auto px-6 md:px-12 lg:px-16">
-            <!-- Section Heading -->
-            <h2 class="text-4xl md:text-5xl font-bold text-center text-[#1A1A1A] mb-12 animate-fade-up">
-                <span class="text-[#003399]">About</span> 
-                <span class="relative inline-block text-[#006633]">
-                    Us
-                    <span class="absolute left-0 bottom-0 w-full h-1 bg-[#FF6600] rounded-full"></span>
-                </span>  
-            </h2>
+    <!-- Who We Are (Landing Page Summary) -->
+    <section id="who-we-are-summary" class="py-16 bg-gray-100">
+        <div class="container mx-auto px-6 md:px-12 lg:px-20">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
 
-            <!-- About Us Content -->
-            <div class="grid md:grid-cols-3 gap-8">
-                <!-- Community Health -->
-                <div class="bg-white p-8 rounded-lg shadow-lg animate-fade-up">
-                    <div class="flex items-center gap-4 mb-4">
-                        <span class="w-12 h-12 bg-[#003399] text-white flex items-center justify-center text-2xl font-bold rounded-full">1</span>
-                        <h3 class="text-2xl font-semibold text-[#1A1A1A]">Community Health</h3>
+                <!-- Left Side: Image -->
+                <div class="relative">
+                    <img 
+                        src="Assets/empowering_communities.jpg" 
+                        alt="Empowering Communities" 
+                        class="rounded-lg shadow-lg hover:shadow-2xl transition-transform hover:scale-105 duration-300"
+                    >
+                    <div class="absolute top-4 left-4 bg-[#FF6600] text-white px-4 py-2 rounded-full text-sm font-semibold shadow-lg">
+                        Empowering Communities
                     </div>
-                    <p class="text-gray-700">
-                        We work to enhance community health by providing education, preventive care, and essential services to underserved populations. Our goal is to bridge healthcare gaps, ensuring that everyone, regardless of their background, has access to quality health resources.
-                    </p>
                 </div>
 
-                <!-- Home Health -->
-                <div class="bg-white p-8 rounded-lg shadow-lg animate-fade-up delay-200">
-                    <div class="flex items-center gap-4 mb-4">
-                        <span class="w-12 h-12 bg-[#006633] text-white flex items-center justify-center text-2xl font-bold rounded-full">2</span>
-                        <h3 class="text-2xl font-semibold text-[#1A1A1A]">Home Health</h3>
-                    </div>
-                    <p class="text-gray-700">
-                        Our home health services provide personalized care and support to individuals who need assistance with daily living activities. We focus on helping elderly individuals and patients recovering at home maintain independence while receiving quality medical and non-medical care.
+                <!-- Right Side: Summary Content -->
+                <div class="animate-fade-up">
+                    <h2 class="text-4xl font-bold mb-6">
+                        <span class="text-[#003399]">Who</span> 
+                        <span class="text-[#006633]">We Are</span>
+                    </h2>
+                    <p class="text-lg text-gray-700 mb-4">
+                        EmpowerGlobal Bridge Initiative (EGBI) is a non-governmental organization committed to uplifting communities affected by poverty, illiteracy, disability, disease, and social injustice.
                     </p>
+                    <p class="text-lg text-gray-700 mb-6">
+                        Through education, healthcare, microfinancing, and social justice programs, we empower individuals to create lasting change in their lives.
+                    </p>
+
+                    <!-- Read More Button -->
+                    <a href="About_us.html" class="inline-block bg-[#003399] text-white font-semibold px-6 py-3 rounded-lg shadow-md hover:bg-[#006633] transition duration-300">
+                        Read More →
+                    </a>
                 </div>
 
-                <!-- People Living with Disabilities -->
-                <div class="bg-white p-8 rounded-lg shadow-lg animate-fade-up delay-400">
-                    <div class="flex items-center gap-4 mb-4">
-                        <span class="w-12 h-12 bg-[#FF6600] text-white flex items-center justify-center text-2xl font-bold rounded-full">3</span>
-                        <h3 class="text-2xl font-semibold text-[#1A1A1A]">People Living with Disabilities</h3>
-                    </div>
-                    <p class="text-gray-700">
-                        We are committed to empowering individuals with disabilities by providing inclusive healthcare, support services, and advocacy. Our programs aim to enhance mobility, accessibility, and social integration, ensuring that everyone can lead a dignified and independent life.
-                    </p>
-                </div>
             </div>
         </div>
     </section>
@@ -283,115 +316,180 @@
         </div>
     </section>
 
+    <!-- Objectives & Core Values Section -->
+    <section id="learn_more"  class="py-24 bg-[#0a0a0a] text-white">
+        <div class="container mx-auto px-6 md:px-12 lg:px-16">
+            <h2 class="text-4xl md:text-5xl font-bold text-center mb-16 animate-fade-up">
+                <span class="text-[#FF6600]">Our</span>  
+                <span class="relative inline-block text-[#00FF99]">
+                    Objectives & Core Values
+                    <span class="absolute left-0 bottom-0 w-full h-1 bg-[#FF6600] rounded-full"></span>
+                </span> 
+            </h2>
+
+            <div class="grid gap-10 md:grid-cols-2">
+                <!-- Objectives Section -->
+                <div class="relative bg-white/10 backdrop-blur-lg border border-white/20 p-10 rounded-xl shadow-xl animate-fade-up">
+                    <h3 class="text-3xl font-semibold mb-6 text-[#FF6600]">Our Objectives</h3>
+                    <ul class="space-y-6 text-gray-200">
+                        <li class="flex items-start space-x-4">
+                            <span class="text-[#FF6600] text-2xl">🎓</span>
+                            <p>Provide quality education and skill-based training to <strong>100,000 youth and women</strong> by 2025 for employment and income generation.</p>
+                        </li>
+                        <li class="flex items-start space-x-4">
+                            <span class="text-[#00FF99] text-2xl">⚕️</span>
+                            <p>Improve the health and well-being of <strong>500,000 people</strong> by 2025 through health education, awareness, and disease treatment.</p>
+                        </li>
+                        <li class="flex items-start space-x-4">
+                            <span class="text-[#FF6600] text-2xl">🌾</span>
+                            <p>Enhance food security and income for <strong>200,000 rural and urban poor</strong> by 2025 through modern agriculture and market access.</p>
+                        </li>
+                        <li class="flex items-start space-x-4">
+                            <span class="text-[#00FF99] text-2xl">⚖️</span>
+                            <p>Protect and promote the rights and dignity of <strong>300,000 marginalized groups</strong> by 2025 through advocacy, legal aid, and support services.</p>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Core Values Section -->
+                <div class="relative bg-white/10 backdrop-blur-lg border border-white/20 p-10 rounded-xl shadow-xl animate-fade-up">
+                    <h3 class="text-3xl font-semibold mb-6 text-[#00FF99]">Our Core Values</h3>
+                    <ul class="space-y-6 text-gray-200">
+                        <li class="flex items-start space-x-4">
+                            <span class="text-[#00FF99] text-2xl">❤️</span>
+                            <p><strong>Compassion:</strong> We care deeply and strive to improve the quality of life of those we serve.</p>
+                        </li>
+                        <li class="flex items-start space-x-4">
+                            <span class="text-[#FF6600] text-2xl">🌟</span>
+                            <p><strong>Excellence:</strong> We uphold the highest standards of professionalism, accountability, and transparency.</p>
+                        </li>
+                        <li class="flex items-start space-x-4">
+                            <span class="text-[#00FF99] text-2xl">🚀</span>
+                            <p><strong>Innovation:</strong> We embrace creativity, technology, and partnerships to maximize impact.</p>
+                        </li>
+                        <li class="flex items-start space-x-4">
+                            <span class="text-[#FF6600] text-2xl">🌍</span>
+                            <p><strong>Diversity:</strong> We promote inclusion, equity, and cultural respect in all we do.</p>
+                        </li>
+                        <li class="flex items-start space-x-4">
+                            <span class="text-[#00FF99] text-2xl">⚖️</span>
+                            <p><strong>Integrity:</strong> We act ethically, honestly, and responsibly while upholding human rights and justice.</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Services Section (FAQ Style) -->
-<div id="services" class="py-24 bg-gray-50">
-    <div class="container mx-auto px-4">
-        <h2 class="text-4xl md:text-5xl font-bold text-center mb-12">
-            <span class="text-[#003399]">Our</span>  
-            <span class="relative inline-block text-[#FF6600]">
-                Services
-                <span class="absolute left-0 bottom-0 w-full h-1 bg-[#FF6600] rounded-full"></span>
-            </span> 
-        </h2>
+    <div id="services" class="py-24 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl md:text-5xl font-bold text-center mb-12">
+                <span class="text-[#003399]">Our</span>  
+                <span class="relative inline-block text-[#FF6600]">
+                    Services
+                    <span class="absolute left-0 bottom-0 w-full h-1 bg-[#FF6600] rounded-full"></span>
+                </span> 
+            </h2>
 
-        <!-- FAQ Container -->
-        <div class="max-w-4xl mx-auto space-y-6">
-            
-            <!-- Service Item: Non-Medical Care -->
-            <div class="bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105 border border-[#003399]">
-                <button class="w-full text-left py-5 px-6 flex items-center justify-between" onclick="toggleFAQ(1)">
-                    <div class="flex items-center gap-4">
-                        <span class="bg-[#003399] text-white p-2 rounded-full">
-                            🏡
-                        </span>
-                        <h3 class="text-lg font-semibold text-[#003399]">Community Health</h3>
+            <!-- FAQ Container -->
+            <div class="max-w-4xl mx-auto space-y-6">
+                
+                <!-- Service Item: Non-Medical Care -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105 border border-[#003399]">
+                    <button class="w-full text-left py-5 px-6 flex items-center justify-between" onclick="toggleFAQ(1)">
+                        <div class="flex items-center gap-4">
+                            <span class="bg-[#003399] text-white p-2 rounded-full">
+                                🏡
+                            </span>
+                            <h3 class="text-lg font-semibold text-[#003399]">Community Health</h3>
+                        </div>
+                        <span id="icon-1">▼</span>
+                    </button>
+                    <div id="faq-1" class="hidden p-4 bg-gray-100">
+                        <p class="text-gray-700 mb-3">We provide daily living assistance to improve comfort and well-being.</p>
+                        <ul class="space-y-2 text-black">
+                            <li>★ Personal Care - Assistance with grooming and hygiene.</li>
+                            <li>★ Companionship - Emotional and social support.</li>
+                            <li>★ Housekeeping - Light cleaning and laundry services.</li>
+                            <li>★ Meal Preparation - Healthy meal assistance.</li>
+                            <li>★ Caregiver Services - Professional home assistance.</li>
+                        </ul>
                     </div>
-                    <span id="icon-1">▼</span>
-                </button>
-                <div id="faq-1" class="hidden p-4 bg-gray-100">
-                    <p class="text-gray-700 mb-3">We provide daily living assistance to improve comfort and well-being.</p>
-                    <ul class="space-y-2 text-black">
-                        <li>★ Personal Care - Assistance with grooming and hygiene.</li>
-                        <li>★ Companionship - Emotional and social support.</li>
-                        <li>★ Housekeeping - Light cleaning and laundry services.</li>
-                        <li>★ Meal Preparation - Healthy meal assistance.</li>
-                        <li>★ Caregiver Services - Professional home assistance.</li>
-                    </ul>
                 </div>
+
+                <!-- Service Item: Medical Care -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105 border border-[#006633]">
+                    <button class="w-full text-left py-5 px-6 flex items-center justify-between" onclick="toggleFAQ(2)">
+                        <div class="flex items-center gap-4">
+                            <span class="bg-[#006633] text-white p-2 rounded-full">
+                                🏥
+                            </span>
+                            <h3 class="text-lg font-semibold text-[#006633]">Home Care</h3>
+                        </div>
+                        <span id="icon-2">▼</span>
+                    </button>
+                    <div id="faq-2" class="hidden p-4 bg-gray-100">
+                        <p class="text-gray-700 mb-3">Our team provides professional healthcare support to ensure well-being.</p>
+                        <ul class="space-y-2 text-black">
+                            <li>◆ Skilled Nursing - Experienced nursing care at home.</li>
+                            <li>◆ Physical Therapy - Rehabilitation programs.</li>
+                            <li>◆ Medication Management - Organized prescription schedules.</li>
+                            <li>◆ Hospital Support - Post-hospitalization assistance.</li>
+                            <li>◆ Lab Services - Home-based medical tests.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Service Item: Specialized Services -->
+                <!-- <div class="bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105 border border-[#FF0000]">
+                    <button class="w-full text-left py-5 px-6 flex items-center justify-between" onclick="toggleFAQ(3)">
+                        <div class="flex items-center gap-4">
+                            <span class="bg-[#FF0000] text-white p-2 rounded-full">
+                                💖
+                            </span>
+                            <h3 class="text-lg font-semibold text-[#FF0000]">Specialized Services</h3>
+                        </div>
+                        <span id="icon-3">▼</span>
+                    </button>
+                    <div id="faq-3" class="hidden p-4 bg-gray-100">
+                        <p class="text-gray-700 mb-3">Specialized support for chronic illnesses and rehabilitation.</p>
+                        <ul class="space-y-2 text-black">
+                            <li>❖ Cancer Care - Comprehensive support for cancer patients.</li>
+                            <li>❖ Diabetes Care - Personalized diabetes management.</li>
+                            <li>❖ Stroke Rehab - Assistance in mobility recovery.</li>
+                            <li>❖ Neuromuscular Care - Support for nervous system disorders.</li>
+                            <li>❖ End-of-Life Care - Compassionate palliative services.</li>
+                        </ul>
+                    </div>
+                </div> -->
+
+                <!-- Service Item: Community Care -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105 border border-[#FF6600]">
+                    <button class="w-full text-left py-5 px-6 flex items-center justify-between" onclick="toggleFAQ(4)">
+                        <div class="flex items-center gap-4">
+                            <span class="bg-[#FF6600] text-white p-2 rounded-full">
+                                🌍
+                            </span>
+                            <h3 class="text-lg font-semibold text-[#FF6600]">Community Care</h3>
+                        </div>
+                        <span id="icon-4">▼</span>
+                    </button>
+                    <div id="faq-4" class="hidden p-4 bg-gray-100">
+                        <p class="text-gray-700 mb-3">Programs designed to educate and empower the community.</p>
+                        <ul class="space-y-2 text-black">
+                            <li>➤ Caregiver Training - Educational workshops.</li>
+                            <li>➤ Health Education - Public awareness programs.</li>
+                            <li>➤ Mental Health - Therapy and counseling.</li>
+                            <li>➤ Preventive Care - Early detection initiatives.</li>
+                            <li>➤ Elderly Care - Senior well-being programs.</li>
+                        </ul>
+                    </div>
+                </div>
+
             </div>
-
-            <!-- Service Item: Medical Care -->
-            <div class="bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105 border border-[#006633]">
-                <button class="w-full text-left py-5 px-6 flex items-center justify-between" onclick="toggleFAQ(2)">
-                    <div class="flex items-center gap-4">
-                        <span class="bg-[#006633] text-white p-2 rounded-full">
-                            🏥
-                        </span>
-                        <h3 class="text-lg font-semibold text-[#006633]">Home Care</h3>
-                    </div>
-                    <span id="icon-2">▼</span>
-                </button>
-                <div id="faq-2" class="hidden p-4 bg-gray-100">
-                    <p class="text-gray-700 mb-3">Our team provides professional healthcare support to ensure well-being.</p>
-                    <ul class="space-y-2 text-black">
-                        <li>◆ Skilled Nursing - Experienced nursing care at home.</li>
-                        <li>◆ Physical Therapy - Rehabilitation programs.</li>
-                        <li>◆ Medication Management - Organized prescription schedules.</li>
-                        <li>◆ Hospital Support - Post-hospitalization assistance.</li>
-                        <li>◆ Lab Services - Home-based medical tests.</li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- Service Item: Specialized Services -->
-            <!-- <div class="bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105 border border-[#FF0000]">
-                <button class="w-full text-left py-5 px-6 flex items-center justify-between" onclick="toggleFAQ(3)">
-                    <div class="flex items-center gap-4">
-                        <span class="bg-[#FF0000] text-white p-2 rounded-full">
-                            💖
-                        </span>
-                        <h3 class="text-lg font-semibold text-[#FF0000]">Specialized Services</h3>
-                    </div>
-                    <span id="icon-3">▼</span>
-                </button>
-                <div id="faq-3" class="hidden p-4 bg-gray-100">
-                    <p class="text-gray-700 mb-3">Specialized support for chronic illnesses and rehabilitation.</p>
-                    <ul class="space-y-2 text-black">
-                        <li>❖ Cancer Care - Comprehensive support for cancer patients.</li>
-                        <li>❖ Diabetes Care - Personalized diabetes management.</li>
-                        <li>❖ Stroke Rehab - Assistance in mobility recovery.</li>
-                        <li>❖ Neuromuscular Care - Support for nervous system disorders.</li>
-                        <li>❖ End-of-Life Care - Compassionate palliative services.</li>
-                    </ul>
-                </div>
-            </div> -->
-
-            <!-- Service Item: Community Care -->
-            <div class="bg-white rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105 border border-[#FF6600]">
-                <button class="w-full text-left py-5 px-6 flex items-center justify-between" onclick="toggleFAQ(4)">
-                    <div class="flex items-center gap-4">
-                        <span class="bg-[#FF6600] text-white p-2 rounded-full">
-                            🌍
-                        </span>
-                        <h3 class="text-lg font-semibold text-[#FF6600]">Community Care</h3>
-                    </div>
-                    <span id="icon-4">▼</span>
-                </button>
-                <div id="faq-4" class="hidden p-4 bg-gray-100">
-                    <p class="text-gray-700 mb-3">Programs designed to educate and empower the community.</p>
-                    <ul class="space-y-2 text-black">
-                        <li>➤ Caregiver Training - Educational workshops.</li>
-                        <li>➤ Health Education - Public awareness programs.</li>
-                        <li>➤ Mental Health - Therapy and counseling.</li>
-                        <li>➤ Preventive Care - Early detection initiatives.</li>
-                        <li>➤ Elderly Care - Senior well-being programs.</li>
-                    </ul>
-                </div>
-            </div>
-
         </div>
     </div>
-</div>
 
 <!-- JavaScript for FAQ Toggle -->
 <script>
@@ -521,70 +619,7 @@
         </div>
     </section>
 
-    <!-- Objectives & Core Values Section -->
-    <section id="learn_more"  class="py-24 bg-[#0a0a0a] text-white">
-        <div class="container mx-auto px-6 md:px-12 lg:px-16">
-            <h2 class="text-4xl md:text-5xl font-bold text-center mb-16 animate-fade-up">
-                <span class="text-[#FF6600]">Our</span>  
-                <span class="relative inline-block text-[#00FF99]">
-                    Objectives & Core Values
-                    <span class="absolute left-0 bottom-0 w-full h-1 bg-[#FF6600] rounded-full"></span>
-                </span> 
-            </h2>
-
-            <div class="grid gap-10 md:grid-cols-2">
-                <!-- Objectives Section -->
-                <div class="relative bg-white/10 backdrop-blur-lg border border-white/20 p-10 rounded-xl shadow-xl animate-fade-up">
-                    <h3 class="text-3xl font-semibold mb-6 text-[#FF6600]">Our Objectives</h3>
-                    <ul class="space-y-6 text-gray-200">
-                        <li class="flex items-start space-x-4">
-                            <span class="text-[#FF6600] text-2xl">🎓</span>
-                            <p>Provide quality education and skill-based training to <strong>100,000 youth and women</strong> by 2025 for employment and income generation.</p>
-                        </li>
-                        <li class="flex items-start space-x-4">
-                            <span class="text-[#00FF99] text-2xl">⚕️</span>
-                            <p>Improve the health and well-being of <strong>500,000 people</strong> by 2025 through health education, awareness, and disease treatment.</p>
-                        </li>
-                        <li class="flex items-start space-x-4">
-                            <span class="text-[#FF6600] text-2xl">🌾</span>
-                            <p>Enhance food security and income for <strong>200,000 rural and urban poor</strong> by 2025 through modern agriculture and market access.</p>
-                        </li>
-                        <li class="flex items-start space-x-4">
-                            <span class="text-[#00FF99] text-2xl">⚖️</span>
-                            <p>Protect and promote the rights and dignity of <strong>300,000 marginalized groups</strong> by 2025 through advocacy, legal aid, and support services.</p>
-                        </li>
-                    </ul>
-                </div>
-
-                <!-- Core Values Section -->
-                <div class="relative bg-white/10 backdrop-blur-lg border border-white/20 p-10 rounded-xl shadow-xl animate-fade-up">
-                    <h3 class="text-3xl font-semibold mb-6 text-[#00FF99]">Our Core Values</h3>
-                    <ul class="space-y-6 text-gray-200">
-                        <li class="flex items-start space-x-4">
-                            <span class="text-[#00FF99] text-2xl">❤️</span>
-                            <p><strong>Compassion:</strong> We care deeply and strive to improve the quality of life of those we serve.</p>
-                        </li>
-                        <li class="flex items-start space-x-4">
-                            <span class="text-[#FF6600] text-2xl">🌟</span>
-                            <p><strong>Excellence:</strong> We uphold the highest standards of professionalism, accountability, and transparency.</p>
-                        </li>
-                        <li class="flex items-start space-x-4">
-                            <span class="text-[#00FF99] text-2xl">🚀</span>
-                            <p><strong>Innovation:</strong> We embrace creativity, technology, and partnerships to maximize impact.</p>
-                        </li>
-                        <li class="flex items-start space-x-4">
-                            <span class="text-[#FF6600] text-2xl">🌍</span>
-                            <p><strong>Diversity:</strong> We promote inclusion, equity, and cultural respect in all we do.</p>
-                        </li>
-                        <li class="flex items-start space-x-4">
-                            <span class="text-[#00FF99] text-2xl">⚖️</span>
-                            <p><strong>Integrity:</strong> We act ethically, honestly, and responsibly while upholding human rights and justice.</p>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
+    
 
     <!-- Impact Section -->
     <section class="py-24 bg-gradient-to-r from-[#F8F9FA] to-[#E8ECEF] text-[#1A1A1A]">
@@ -902,9 +937,6 @@
             </a>
         </div>
     </footer>
-
-
-
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
