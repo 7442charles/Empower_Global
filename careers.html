@@ -1,81 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="EmpowerGlobal Bridge Initiative (EBI) is dedicated to eradicating poverty and empowering communities through education, healthcare, and sustainable development.">
-        <meta name="author" content="EmpowerGlobal Bridge Initiative">
-        <meta name="keywords" content="EmpowerGlobal, EBI, NGO, poverty eradication, community empowerment, education, healthcare, sustainable development">
-        <title>EmpowerGlobal Bridge Initiative (EBI)</title>
-
-        <!-- Open Graph / Facebook -->
-        <meta property="og:type" content="website">
-        <meta property="og:url" content="https://empowersglobal.org">
-        <meta property="og:title" content="EmpowerGlobal Bridge Initiative (EBI)">
-        <meta property="og:description" content="Empowering People, Transforming Lives. Join EBI in making a lasting difference.">
-        <meta property="og:image" content="https://raw.githubusercontent.com/7442charles/Empower_Global/refs/heads/main/Assets/logo_white_bg.jpg"> <!--Add the actual image URL-->
-
-        <!-- Twitter -->
-        <meta name="twitter:card" content="summary_large_image">
-        <meta name="twitter:url" content="https://empowersglobal.org">
-        <meta name="twitter:title" content="EmpowerGlobal Bridge Initiative (EBI)">
-        <meta name="twitter:description" content="Empowering People, Transforming Lives. Join EBI in making a lasting difference.">
-        <meta name="twitter:image" content="https://raw.githubusercontent.com/7442charles/Empower_Global/refs/heads/main/Assets/logo_white_bg.jpg"> <!--Add the actual image URL-->
-
-
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-        <link rel="shortcut icon" href="Assets/logo_transparent.png" type="image/x-png">
-
-        <script src="https://cdn.tailwindcss.com"></script>
-        <link rel="stylesheet" href="Assets/css/styles.css">
-
-        <script>
-            tailwind.config = {
-                theme: {
-                    extend: {
-                        colors: {
-                            primary: '#003399',
-                            secondary: '#006633',
-                            accent: '#ff0000',
-                            orange: '#ff6600',
-                            dark: '#1a1a1a',
-                        },
-                        fontFamily: {
-                            montserrat: ['Montserrat', 'sans-serif'],
-                        },
-                    }
-                }
-            }
-        </script>
-        <style>
-            html {
-                font-family: 'Montserrat', sans-serif;
-                scroll-behavior: smooth;
-            }
-            .animate-fade-up {
-                opacity: 0;
-                transform: translateY(30px);
-                transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-            }
-            .animate-fade-right {
-                opacity: 0;
-                transform: translateX(-30px);
-                transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-            }
-            .animate-fade-left {
-                opacity: 0;
-                transform: translateX(30px);
-                transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-            }
-            .animate-visible {
-                opacity: 1;
-                transform: translate(0);
-            }
-        </style>
-    </head>
-<body class="font-montserrat">
-    <!-- Navbar -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Careers | EBI</title>
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+</head>
+<body class="bg-gray-100">
     <nav class="fixed w-full bg-white/95 backdrop-blur-md shadow-md z-50">
         <div class="container mx-auto px-6 lg:px-12">
             <div class="flex justify-between items-center h-16">
@@ -230,65 +161,56 @@
         </div>
     </nav>
 
+    <!-- Hero Section -->
+    <header class="bg-[#003399] text-white text-center py-16">
+        <h1 class="text-4xl font-bold">Join Our Mission</h1>
+        <p class="mt-2 text-lg">Empowering Lives, Inspiring Change</p>
+    </header>
 
-    <!-- Single Blog Page -->
-    <section id="blog-post" class="py-16 bg-gray-100">
-        <div class="container mx-auto max-w-3xl px-6">
-            <!-- Blog Title -->
-            <h1 class="text-4xl font-bold text-dark mb-4">Empowering Communities for a Brighter Future</h1>
-            
-            <!-- Blog Meta -->
-            <div class="text-gray-600 text-sm mb-6">
-                <span>By <strong>Admin</strong></span> | <span>March 6, 2025</span>
+    <main class="container mx-auto px-6 md:px-12 lg:px-20 py-16">
+
+        <!-- Careers Grid -->
+        <div class="grid md:grid-cols-2 gap-12">
+
+            <!-- Membership Card -->
+            <div id="membership" class="bg-white shadow-lg rounded-lg p-8 text-center">
+                <!-- <img src="membership-icon.png" alt="Membership" class="mx-auto h-16 w-16 mb-4"> -->
+                <h2 class="text-2xl font-bold text-[#006633]">Membership</h2>
+                <p class="mt-4 text-gray-700">
+                    Become a part of our mission by joining as a member. Gain exclusive insights and contribute to meaningful projects.
+                </p>
+                <a href="membership.html" class="mt-6 inline-block bg-[#FF6600] text-white px-6 py-3 rounded-lg font-semibold hover:bg-[#CC5500] transition-all">
+                    Join Now
+                </a>
             </div>
 
-            <!-- Featured Image -->
-            <img src="Assets/home_care.jpg" alt="Empowering Communities" class="w-full rounded-lg shadow-lg mb-6">
-
-            <!-- Blog Content -->
-            <div class="text-gray-700 leading-relaxed space-y-6">
-                <p>
-                    At EmpowerGlobal Bridge Initiative, we believe in fostering sustainable community development. 
-                    Through strategic partnerships and innovative solutions, we aim to address key challenges and 
-                    create lasting impact.
+            <!-- Volunteer Card -->
+            <div id="volunteer" class="bg-white shadow-lg rounded-lg p-8 text-center">
+                <!-- <img src="volunteer-icon.png" alt="Volunteer" class="mx-auto h-16 w-16 mb-4"> -->
+                <h2 class="text-2xl font-bold text-[#003399]">Volunteer</h2>
+                <p class="mt-4 text-gray-700">
+                    Passionate about making a difference? Volunteer with us and support initiatives in health, education, and economic empowerment.
                 </p>
-
-                <p>
-                    Our approach focuses on community health, home health services, and supporting people 
-                    with disabilities. By working hand-in-hand with local stakeholders, we ensure that our 
-                    programs are impactful and sustainable.
-                </p>
-
-                <blockquote class="border-l-4 border-primary pl-4 italic text-gray-600">
-                    "A strong community is the foundation of a thriving society. Together, we can make a difference."
-                </blockquote>
-
-                <p>
-                    From offering medical assistance to individuals in remote areas to providing home-based 
-                    care for the elderly, our goal is to ensure that no one is left behind. We strive to 
-                    empower individuals and families with the resources they need to lead healthier lives.
-                </p>
+                <a href="volunteer.html" class="mt-6 inline-block bg-[#FF6600] text-white px-6 py-3 rounded-lg font-semibold hover:bg-[#CC5500] transition-all">
+                    Join Now
+                </a>
             </div>
 
-            <!-- Related Posts -->
-            <div class="mt-12">
-                <h2 class="text-2xl font-semibold text-dark mb-4">Related Posts</h2>
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                    <div class="bg-white p-4 rounded-lg shadow-lg">
-                        <img src="Assets/home_care.jpg" alt="Related Post 1" class="w-full h-36 object-cover rounded-lg mb-3">
-                        <h3 class="text-lg font-semibold mb-2">Breaking Barriers: Supporting People with Disabilities</h3>
-                        <a href="#" class="text-primary font-bold hover:underline">Read More</a>
-                    </div>
-
-                    <div class="bg-white p-4 rounded-lg shadow-lg">
-                        <img src="Assets/home_care.jpg" alt="Related Post 2" class="w-full h-36 object-cover rounded-lg mb-3">
-                        <h3 class="text-lg font-semibold mb-2">Healthcare at Home: Making a Difference</h3>
-                        <a href="#" class="text-primary font-bold hover:underline">Read More</a>
-                    </div>
-                </div>
+            <!-- Vacancies Card -->
+            <div id="vacancies" class="bg-white shadow-lg rounded-lg p-8 text-center md:col-span-2">
+                <!-- <img src="vacancies-icon.png" alt="Vacancies" class="mx-auto h-16 w-16 mb-4"> -->
+                <h2 class="text-2xl font-bold text-[#FF6600]">Vacancies</h2>
+                <p class="mt-4 text-gray-700">
+                    Looking for a career with purpose? Explore our current job openings and become part of the EBI team.
+                </p>
+                <a href="vacancies.html" class="mt-6 inline-block bg-[#006633] text-white px-6 py-3 rounded-lg font-semibold hover:bg-[#004422] transition-all">
+                    View Openings
+                </a>
             </div>
+
         </div>
-    </section>
+
+    </main>
 
     <!-- Footer Section -->
     <footer class="bg-[#1A1A1A] text-white py-12">
@@ -377,6 +299,5 @@
         </div>
     </footer>
 
-    <script src="Assets/js/main.js"></script>
 </body>
 </html>
